@@ -1,5 +1,5 @@
 <?php 
-    include_once("../config/db_connector.php");
+    include_once(__DIR__ . '/../config/db_connector.php');
     abstract class Users {
         abstract public function login( $username, $password );
         abstract public function logout();

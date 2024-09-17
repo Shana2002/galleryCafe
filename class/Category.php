@@ -42,7 +42,7 @@
             }
         }
         public function deleteCategory($catgoryId){
-            $sql = "DELETE FROM category WHERE catId = '$catgoryId'";
+            $sql = "DELETE FROM categories WHERE catId = '$catgoryId'";
             $res = mysqli_query($this->db, $sql);
             if($res){
                 return true;

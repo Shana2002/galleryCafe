@@ -1,5 +1,5 @@
 <?php 
-    include_once("../config/db_connector.php"); 
+    include_once(__DIR__ . '/../config/db_connector.php');
     class Menu{
         public $connector;
         public $db;
