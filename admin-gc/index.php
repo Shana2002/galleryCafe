@@ -7,6 +7,8 @@ include("../class/Users.php");
 include("../config/constant.php");
 $category = new Category();
 $menuClass = new Menu();
+$promotion = new Promotion();
+$event = new Events();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -41,95 +43,13 @@ $menuClass = new Menu();
                 <!-- Menu -->
                 <?php include_once('components\content-1\menu-1.php') ?>
                 <!-- Order -->
-                <div class="sub-content-1 category-1">
-                    <h1>Order</h1>
-                    <h2>Now Prepairing</h2>
-                    <div class="orderprp-container">
-                        <div class="prep-card">
-                            <h4>Chicken Mix Rice</h4>
-                            <a href="">Done</a>
-                        </div>
-                        <div class="prep-card">
-                            <h4>Chicken Mix Rice</h4>
-                            <a href="">Done</a>
-                        </div>
-                        <div class="prep-card">
-                            <h4>Chicken Mix Rice</h4>
-                            <a href="">Done</a>
-                        </div>
-                        <div class="prep-card">
-                            <h4>Chicken Mix Rice</h4>
-                            <a href="">Done</a>
-                        </div>
-                    </div>
-                </div>
+                <?php include_once('components\content-1\order-1.php') ?>
                 <!-- Reservation -->
-                <div class="sub-content-1 category-1">
-                    <h1>Reservation</h1>
-                    <h2>Today Reservation</h2>
-                    <div class="orderprp-container">
-                        <div class="prep-card">
-                            <h4>Mrs. Wasala</h4>
-                            <h4>4.00pm</h4>
-                        </div>
-                    </div>
-                </div>
+                <?php include_once('components\content-1\reservation-1.php') ?>
                 <!-- Promotion -->
-                <div class="sub-content-1 category-1">
-                    <h1>Promotion</h1>
-                    <h2>Add Promotion</h2>
-                    <form action="" method="post" enctype="multipart/form-data">
-                        <div>
-                            <label for="title">Title</label>
-                            <input type="text" name="title" id="title">
-                        </div>
-                        <div>
-                            <label for="startDate">Start Date</label>
-                            <input type="date" name="sdate" id="startDate">
-                        </div>
-                        <div>
-                            <label for="endDate">End Date</label>
-                            <input type="date" name="edate" id="endDate">
-                        </div>
-                        <div>
-                            <label for="description">Description</label>
-                            <textarea name="description" id="description"></textarea>
-                        </div>
-                        <div>
-                            <label for="image">Image</label>
-                            <input type="file" name="image" id="image">
-                        </div>
-                        <input type="submit" value="Add Promotion">
-                    </form>
-                </div>
+                <?php include_once('components\content-1\promotion-1.php') ?>
                 <!-- Events -->
-                <div class="sub-content-1 category-1">
-                    <h1>Events</h1>
-                    <h2>Add Events</h2>
-                    <form action="" method="post" enctype="multipart/form-data">
-                        <div>
-                            <label for="title">Title</label>
-                            <input type="text" name="title" id="title">
-                        </div>
-                        <div>
-                            <label for="startDate">Date</label>
-                            <input type="date" name="sdate" id="startDate">
-                        </div>
-                        <div>
-                            <label for="startTime">End Date</label>
-                            <input type="time" name="stime" id="startTime">
-                        </div>
-                        <div>
-                            <label for="description">Description</label>
-                            <textarea name="description" id="description"></textarea>
-                        </div>
-                        <div>
-                            <label for="image">Image</label>
-                            <input type="file" name="image" id="image">
-                        </div>
-                        <input type="submit" value="Add Description">
-                    </form>
-                </div>
+                <?php include_once('components\content-1\event-1.php') ?>
                 <!-- Users -->
                 <div class="sub-content-1 category-1">
                     <h1>Users</h1>
@@ -167,131 +87,13 @@ $menuClass = new Menu();
                 <!-- Menu -->
                 <?php include_once('components\content-2\menu-2.php') ?>
                 <!-- Order -->
-                <div class="sub-container-2 category-2 ">
-                    <div class="order-container">
-                        <table class="oreder-table">
-                            <tr>
-                                <th>Bill No</th>
-                                <th>Customer name</th>
-                                <th>Item Name</th>
-                                <th>States</th>
-                                <th>Action</th>
-                            </tr>
-                            <tr>
-                                <td>001</td>
-                                <td>Hansaka Ravishan</td>
-                                <td>Chicken Mix Rice</td>
-                                <td>Prepairing</td>
-                                <td>
-                                    <a href="">Prepairing</a>
-                                    <a href="">Deliverd</a>
-                                </td>
-                            </tr>
-
-                        </table>
-                    </div>
-                </div>
-
+                <?php include_once('components\content-2\order-2.php') ?>
                 <!-- Reservation -->
-                <div class="sub-container-2 category-2 ">
-                    <div class="order-container">
-                        <table class="oreder-table">
-                            <tr>
-                                <th>No</th>
-                                <th>Customer name</th>
-                                <th>Date</th>
-                                <th>Time</th>
-                            </tr>
-                            <tr>
-                                <td>001</td>
-                                <td>Hansaka Ravishan</td>
-                                <td>C2024/07/23</td>
-                                <td>4.00pm</td>
-                            </tr>
-
-                        </table>
-                    </div>
-                </div>
+                <?php include_once('components\content-2\reservation-2.php') ?>
                 <!-- Promotion -->
-                <div class="sub-container-2 category-2 ">
-                    <div class="menu-container">
-                        <div class="menu-card">
-                            <img src="../Assest/biriyani.jpeg" alt="">
-                            <div>
-                                <h3>Sri Lanka</h3>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, laboriosam? Vero recusandae cum unde quo repellendus illo dolorem tempore? Totam nobis quibusdam molestias blanditiis accusantium fuga praesentium veritatis ullam quam.</p>
-                                <div class="card-bottom">
-                                    <div>
-                                        <h5>Start Date: 2024/03/07</h5>
-                                        <h5>End Date: 2024/03/07</h5>
-                                    </div>
-                                    <span>
-                                        <a href=""><i class="fa-regular fa-pen-to-square"></i></a>
-                                        <a href=""><i class="fa-solid fa-trash"></i></a>
-                                    </span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="menu-card">
-                            <img src="../Assest/biriyani.jpeg" alt="">
-                            <div>
-                                <h3>Sri Lanka</h3>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, laboriosam? Vero recusandae cum unde quo repellendus illo dolorem tempore? Totam nobis quibusdam molestias blanditiis accusantium fuga praesentium veritatis ullam quam.</p>
-                                <div class="card-bottom">
-                                    <div>
-                                        <h5>Start Date: 2024/03/07</h5>
-                                        <h5>End Date: 2024/03/07</h5>
-                                    </div>
-                                    <span>
-                                        <a href=""><i class="fa-regular fa-pen-to-square"></i></a>
-                                        <a href=""><i class="fa-solid fa-trash"></i></a>
-                                    </span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="menu-card">
-                            <img src="../Assest/biriyani.jpeg" alt="">
-                            <div>
-                                <h3>Sri Lanka</h3>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, laboriosam? Vero recusandae cum unde quo repellendus illo dolorem tempore? Totam nobis quibusdam molestias blanditiis accusantium fuga praesentium veritatis ullam quam.</p>
-                                <div class="card-bottom">
-                                    <div>
-                                        <h5>Start Date: 2024/03/07</h5>
-                                        <h5>End Date: 2024/03/07</h5>
-                                    </div>
-                                    <span>
-                                        <a href=""><i class="fa-regular fa-pen-to-square"></i></a>
-                                        <a href=""><i class="fa-solid fa-trash"></i></a>
-                                    </span>
-                                </div>
-                            </div>
-                        </div>
-
-
-                    </div>
-                </div>
+                <?php include_once('components\content-2\promotion-2.php') ?>
                 <!-- events -->
-                <div class="sub-container-2 category-2 ">
-                    <div class="menu-container">
-                        <div class="menu-card">
-                            <img src="../Assest/biriyani.jpeg" alt="">
-                            <div>
-                                <h3>Sri Lanka</h3>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, laboriosam? Vero recusandae cum unde quo repellendus illo dolorem tempore? Totam nobis quibusdam molestias blanditiis accusantium fuga praesentium veritatis ullam quam.</p>
-                                <div class="card-bottom">
-                                    <div>
-                                        <h5>Start Date: 2024/03/07</h5>
-                                        <h5>Start Time: 4.00pm</h5>
-                                    </div>
-                                    <span>
-                                        <a href=""><i class="fa-regular fa-pen-to-square"></i></a>
-                                        <a href=""><i class="fa-solid fa-trash"></i></a>
-                                    </span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <?php include_once('components\content-2\event-2.php') ?>
                 <!-- Users -->
                 <div class="sub-container-2 category-2 ">
                     <div class="order-container">
@@ -348,5 +150,13 @@ $menuClass = new Menu();
     if(isset($_SESSION['menu-view'])){
         echo "<script>tabChange(2)</script>";
         unset($_SESSION["menu-view"]);
+    }
+    if(isset($_SESSION['prom-view'])){
+        echo "<script>tabChange(5)</script>";
+        unset($_SESSION['prom-view']);
+    }
+    if(isset($_SESSION['evt-view'])){
+        echo "<script>tabChange(6)</script>";
+        unset($_SESSION['evt-view']);
     }
     ?>

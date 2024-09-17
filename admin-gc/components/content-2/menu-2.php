@@ -16,7 +16,7 @@
                     <img src="../images/menu/<?php echo $image ?>" alt="">
                     <div>
                         <h3><?php echo $name ?></h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, laboriosam? Vero recusandae cum unde quo repellendus illo dolorem tempore? Totam nobis quibusdam molestias blanditiis accusantium fuga praesentium veritatis ullam quam.</p>
+                        <p><?php echo $description ?></p>
                         <div class="card-bottom">
                             <h3>LKR <?php echo $price ?></h3>
                             <span>

@@ -19,4 +19,18 @@
         $_SESSION['menu-view']='2';
         header('location:'.SITEURL.'admin-gc');
     }
+    if(isset($_GET['promDel'])){
+        $promID = $_GET['promDel'];
+        $prom = new Promotion();
+        $prom->deletepromotion($promID);
+        $_SESSION['prom-view']='2';
+        header('location:'.SITEURL.'admin-gc');
+    }
+    if(isset($_GET['evtDel'])){
+        $evtID = $_GET['evtDel'];
+        $evt = new Events();
+        $evt->deleteEvent($evtID);
+        $_SESSION['evt-view']='2';
+        header('location:'.SITEURL.'admin-gc');
+    }
 ?>
