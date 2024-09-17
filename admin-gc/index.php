@@ -1,13 +1,15 @@
 <?php
-    include("../class/Category.php");
-    include("../class/Events.php");
-    include("../class/Menu.php");
-    include("../class/Promotion.php");
-    include("../class/Users.php");
-    include("../config/constant.php");
+include("../class/Category.php");
+include("../class/Events.php");
+include("../class/Menu.php");
+include("../class/Promotion.php");
+include("../class/Users.php");
+include("../config/constant.php");
+$category = new Category();
 ?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -34,21 +36,7 @@
                 <!-- Dashboard -->
                 <?php include_once('components\content-1\dashboard-1.php') ?>
                 <!-- Category -->
-                <div class="sub-content-1 category-1">
-                    <h1>Category</h1>
-                    <h2>Add Category</h2>
-                    <form action="" method="post" enctype="multipart/form-data">
-                        <div>
-                            <label for="cat-name">Category Name</label>
-                            <input type="text" name="cat-name" id="cat-name">
-                        </div>
-                        <div>
-                            <label for="image">Image</label>
-                            <input type="file" name="image" id="image">
-                        </div>
-                        <input type="submit" value="Add Category">
-                    </form>
-                </div>
+                <?php include_once('components\content-1\category-1.php') ?>
                 <!-- Menu -->
                 <div class="sub-content-1 category-1">
                     <h1>Menu</h1>
@@ -201,10 +189,10 @@
                     <h5>Hansaka</h5>
                 </div>
                 <div class="sub-container-2 active-2 orverview-2 ">
-                    
+
                     <div class="chart-container">
                         <h1>Weekly Sales</h1>
-                        <canvas id="barChart" ></canvas>
+                        <canvas id="barChart"></canvas>
                     </div>
                     <div class="recent-order">
                         <h2>Recent Order</h2>
@@ -238,7 +226,7 @@
                             </table>
                         </div>
                     </div>
-                    
+
                 </div>
                 <!-- categoty -->
                 <div class="sub-container-2 category-2 ">
@@ -274,8 +262,8 @@
                                     <span>
                                         <a href=""><i class="fa-regular fa-pen-to-square"></i></a>
                                         <a href=""><i class="fa-solid fa-trash"></i></a>
-                                    </span> 
-                                </div>                                               
+                                    </span>
+                                </div>
                             </div>
                         </div>
                         <div class="menu-card">
@@ -288,11 +276,11 @@
                                     <span>
                                         <a href=""><i class="fa-regular fa-pen-to-square"></i></a>
                                         <a href=""><i class="fa-solid fa-trash"></i></a>
-                                    </span> 
-                                </div>                                               
+                                    </span>
+                                </div>
                             </div>
                         </div>
-                        
+
                     </div>
                 </div>
                 <!-- Order -->
@@ -316,13 +304,13 @@
                                     <a href="">Deliverd</a>
                                 </td>
                             </tr>
-                            
+
                         </table>
                     </div>
                 </div>
 
                 <!-- Reservation -->
-                 <div class="sub-container-2 category-2 ">
+                <div class="sub-container-2 category-2 ">
                     <div class="order-container">
                         <table class="oreder-table">
                             <tr>
@@ -337,7 +325,7 @@
                                 <td>C2024/07/23</td>
                                 <td>4.00pm</td>
                             </tr>
-                            
+
                         </table>
                     </div>
                 </div>
@@ -350,12 +338,15 @@
                                 <h3>Sri Lanka</h3>
                                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, laboriosam? Vero recusandae cum unde quo repellendus illo dolorem tempore? Totam nobis quibusdam molestias blanditiis accusantium fuga praesentium veritatis ullam quam.</p>
                                 <div class="card-bottom">
-                                    <div><h5>Start Date: 2024/03/07</h5><h5>End Date: 2024/03/07</h5></div>
+                                    <div>
+                                        <h5>Start Date: 2024/03/07</h5>
+                                        <h5>End Date: 2024/03/07</h5>
+                                    </div>
                                     <span>
                                         <a href=""><i class="fa-regular fa-pen-to-square"></i></a>
                                         <a href=""><i class="fa-solid fa-trash"></i></a>
-                                    </span> 
-                                </div>                                               
+                                    </span>
+                                </div>
                             </div>
                         </div>
                         <div class="menu-card">
@@ -364,12 +355,15 @@
                                 <h3>Sri Lanka</h3>
                                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, laboriosam? Vero recusandae cum unde quo repellendus illo dolorem tempore? Totam nobis quibusdam molestias blanditiis accusantium fuga praesentium veritatis ullam quam.</p>
                                 <div class="card-bottom">
-                                    <div><h5>Start Date: 2024/03/07</h5><h5>End Date: 2024/03/07</h5></div>
+                                    <div>
+                                        <h5>Start Date: 2024/03/07</h5>
+                                        <h5>End Date: 2024/03/07</h5>
+                                    </div>
                                     <span>
                                         <a href=""><i class="fa-regular fa-pen-to-square"></i></a>
                                         <a href=""><i class="fa-solid fa-trash"></i></a>
-                                    </span> 
-                                </div>                                               
+                                    </span>
+                                </div>
                             </div>
                         </div>
                         <div class="menu-card">
@@ -378,16 +372,19 @@
                                 <h3>Sri Lanka</h3>
                                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, laboriosam? Vero recusandae cum unde quo repellendus illo dolorem tempore? Totam nobis quibusdam molestias blanditiis accusantium fuga praesentium veritatis ullam quam.</p>
                                 <div class="card-bottom">
-                                    <div><h5>Start Date: 2024/03/07</h5><h5>End Date: 2024/03/07</h5></div>
+                                    <div>
+                                        <h5>Start Date: 2024/03/07</h5>
+                                        <h5>End Date: 2024/03/07</h5>
+                                    </div>
                                     <span>
                                         <a href=""><i class="fa-regular fa-pen-to-square"></i></a>
                                         <a href=""><i class="fa-solid fa-trash"></i></a>
-                                    </span> 
-                                </div>                                               
+                                    </span>
+                                </div>
                             </div>
                         </div>
-                        
-                        
+
+
                     </div>
                 </div>
                 <!-- events -->
@@ -399,14 +396,17 @@
                                 <h3>Sri Lanka</h3>
                                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, laboriosam? Vero recusandae cum unde quo repellendus illo dolorem tempore? Totam nobis quibusdam molestias blanditiis accusantium fuga praesentium veritatis ullam quam.</p>
                                 <div class="card-bottom">
-                                    <div><h5>Start Date: 2024/03/07</h5><h5>Start Time: 4.00pm</h5></div>
+                                    <div>
+                                        <h5>Start Date: 2024/03/07</h5>
+                                        <h5>Start Time: 4.00pm</h5>
+                                    </div>
                                     <span>
                                         <a href=""><i class="fa-regular fa-pen-to-square"></i></a>
                                         <a href=""><i class="fa-solid fa-trash"></i></a>
-                                    </span> 
-                                </div>                                               
+                                    </span>
+                                </div>
                             </div>
-                        </div> 
+                        </div>
                     </div>
                 </div>
                 <!-- Users -->
@@ -417,7 +417,7 @@
                                 <th>User Name</th>
                                 <th>User Type</th>
                                 <th>Action</th>
-                                
+
                             </tr>
                             <tr>
                                 <td>001</td>
@@ -427,7 +427,7 @@
                                     <a href="">Reset Password</a>
                                 </td>
                             </tr>
-                            
+
                         </table>
                     </div>
                 </div>
@@ -435,7 +435,7 @@
                 <div class="sub-container-2 category-2 ">
                     <div class="setting-container-2">
                         <img src="../Assest/biriyani.jpeg" alt="">
-                        <div>   
+                        <div>
                             <h1>Hansaka Ravishan</h1>
                             <h3>Admin</h3>
                             <button>Change Password</button>
@@ -449,6 +449,18 @@
 
 
     <script src="../script/admin.js?v=<?php echo time() ?>"></script>
+    
+
+
+
 </body>
 
 </html>
+<?php
+
+    if (isset($_SESSION['cat-menu'])) {
+        echo "<script>tabChange(1)</script>";
+        unset($_SESSION['cat-menu']);
+    }
+
+    ?>

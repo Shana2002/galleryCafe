@@ -475,7 +475,13 @@ textarea:focus {
 .setting-container-2 div h3{
     color: #6d6d6d;
 }
-
+/* php */
+.error{
+    color: red;
+}
+.done{
+    color: green;
+}
 
 .active-2 {
     display: flex;
