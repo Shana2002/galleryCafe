@@ -1,6 +1,13 @@
+<?php
+    include("../class/Category.php");
+    include("../class/Events.php");
+    include("../class/Menu.php");
+    include("../class/Promotion.php");
+    include("../class/Users.php");
+    include("../config/constant.php");
+?>
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -239,7 +246,7 @@
             <!-- Content 2 -->
             <div class="content-2">
                 <div class="profile-container">
-                    <img src="IMG_8980.JPG" alt="">
+                    <img src="../Assest/biriyani.jpeg" alt="">
                     <h5>Hansaka</h5>
                 </div>
                 <div class="sub-container-2 active-2 orverview-2 ">
@@ -286,7 +293,7 @@
                 <div class="sub-container-2 category-2 ">
                     <div class="category-container">
                         <div class="cat-card">
-                            <img src="IMG_8980.JPG" alt="">
+                            <img src="../Assest/biriyani.jpeg" alt="">
                             <h3>Sri Lanka</h3>
                             <div class="cat-act">
                                 <a href=""><i class="fa-regular fa-pen-to-square"></i></a>
@@ -294,11 +301,11 @@
                             </div>
                         </div>
                         <div class="cat-card">
-                            <img src="IMG_8980.JPG" alt="">
+                            <img src="../Assest/biriyani.jpeg" alt="">
                             <h3>Sri Lanka</h3>
                         </div>
                         <div class="cat-card">
-                            <img src="IMG_8980.JPG" alt="">
+                            <img src="../Assest/biriyani.jpeg" alt="">
                             <h3>Sri Lanka</h3>
                         </div>
                     </div>
@@ -307,7 +314,7 @@
                 <div class="sub-container-2 category-2 ">
                     <div class="menu-container">
                         <div class="menu-card">
-                            <img src="IMG_8980.JPG" alt="">
+                            <img src="../Assest/biriyani.jpeg" alt="">
                             <div>
                                 <h3>Sri Lanka</h3>
                                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, laboriosam? Vero recusandae cum unde quo repellendus illo dolorem tempore? Totam nobis quibusdam molestias blanditiis accusantium fuga praesentium veritatis ullam quam.</p>
@@ -321,7 +328,7 @@
                             </div>
                         </div>
                         <div class="menu-card">
-                            <img src="IMG_8980.JPG" alt="">
+                            <img src="../Assest/biriyani.jpeg" alt="">
                             <div>
                                 <h3>Sri Lanka</h3>
                                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, laboriosam? Vero recusandae cum unde quo repellendus illo dolorem tempore? Totam nobis quibusdam molestias blanditiis accusantium fuga praesentium veritatis ullam quam.</p>
@@ -387,7 +394,7 @@
                 <div class="sub-container-2 category-2 ">
                     <div class="menu-container">
                         <div class="menu-card">
-                            <img src="IMG_8980.JPG" alt="">
+                            <img src="../Assest/biriyani.jpeg" alt="">
                             <div>
                                 <h3>Sri Lanka</h3>
                                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, laboriosam? Vero recusandae cum unde quo repellendus illo dolorem tempore? Totam nobis quibusdam molestias blanditiis accusantium fuga praesentium veritatis ullam quam.</p>
@@ -401,7 +408,7 @@
                             </div>
                         </div>
                         <div class="menu-card">
-                            <img src="IMG_8980.JPG" alt="">
+                            <img src="../Assest/biriyani.jpeg" alt="">
                             <div>
                                 <h3>Sri Lanka</h3>
                                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, laboriosam? Vero recusandae cum unde quo repellendus illo dolorem tempore? Totam nobis quibusdam molestias blanditiis accusantium fuga praesentium veritatis ullam quam.</p>
@@ -415,7 +422,7 @@
                             </div>
                         </div>
                         <div class="menu-card">
-                            <img src="IMG_8980.JPG" alt="">
+                            <img src="../Assest/biriyani.jpeg" alt="">
                             <div>
                                 <h3>Sri Lanka</h3>
                                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, laboriosam? Vero recusandae cum unde quo repellendus illo dolorem tempore? Totam nobis quibusdam molestias blanditiis accusantium fuga praesentium veritatis ullam quam.</p>
@@ -436,7 +443,7 @@
                 <div class="sub-container-2 category-2 ">
                     <div class="menu-container">
                         <div class="menu-card">
-                            <img src="IMG_8980.JPG" alt="">
+                            <img src="../Assest/biriyani.jpeg" alt="">
                             <div>
                                 <h3>Sri Lanka</h3>
                                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, laboriosam? Vero recusandae cum unde quo repellendus illo dolorem tempore? Totam nobis quibusdam molestias blanditiis accusantium fuga praesentium veritatis ullam quam.</p>
@@ -476,7 +483,7 @@
                 <!-- Setting -->
                 <div class="sub-container-2 category-2 ">
                     <div class="setting-container-2">
-                        <img src="IMG_8980.JPG" alt="">
+                        <img src="../Assest/biriyani.jpeg" alt="">
                         <div>   
                             <h1>Hansaka Ravishan</h1>
                             <h3>Admin</h3>
@@ -490,7 +497,7 @@
     </div>
 
 
-    <script src="../script/admin.js?v=<?php echo $time ?>"></script>
+    <script src="../script/admin.js?v=<?php echo time() ?>"></script>
 </body>
 
 </html>

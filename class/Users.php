@@ -1,5 +1,5 @@
 <?php 
-    include("../config/db_connector.php");
+    include_once("../config/db_connector.php");
     abstract class Users {
         abstract public function login( $username, $password );
         abstract public function logout();

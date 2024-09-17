@@ -1,5 +1,5 @@
 <?php 
-    include("config/db_connector.php");
+    include_once("../config/db_connector.php");
     class Category{
         public $db;
         public $connector;

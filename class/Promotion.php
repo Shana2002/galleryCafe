@@ -1,5 +1,5 @@
 <?php 
-    include("config/db_connector.php");
+    include_once("../config/db_connector.php");
     class Promotion{
         public $db;
         public $connector;
