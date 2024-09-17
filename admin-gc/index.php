@@ -6,6 +6,7 @@ include("../class/Promotion.php");
 include("../class/Users.php");
 include("../config/constant.php");
 $category = new Category();
+$menuClass = new Menu();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -38,36 +39,7 @@ $category = new Category();
                 <!-- Category -->
                 <?php include_once('components\content-1\category-1.php') ?>
                 <!-- Menu -->
-                <div class="sub-content-1 category-1">
-                    <h1>Menu</h1>
-                    <h2>Add Category</h2>
-                    <form action="" method="post" enctype="multipart/form-data">
-                        <div>
-                            <label for="ame">Name</label>
-                            <input type="text" name="name" id="name">
-                        </div>
-                        <div>
-                            <label for="cat-name">Category</label>
-                            <Select name="category">
-                                <option value="Sri Lanka">Sri Lanka</option>
-                                <option value="Indian">Indian</option>
-                            </Select>
-                        </div>
-                        <div>
-                            <label for="description">Description</label>
-                            <textArea name="description" id="description"></textArea>
-                        </div>
-                        <div>
-                            <label for="Price">Price</label>
-                            <input type="number" name="price" id="price">
-                        </div>
-                        <div>
-                            <label for="image">Image</label>
-                            <input type="file" name="image" id="image">
-                        </div>
-                        <input type="submit" value="Add Category">
-                    </form>
-                </div>
+                <?php include_once('components\content-1\menu-1.php') ?>
                 <!-- Order -->
                 <div class="sub-content-1 category-1">
                     <h1>Order</h1>
@@ -193,39 +165,7 @@ $category = new Category();
                 <!-- categoty -->
                 <?php include_once('components\content-2\category-2.php') ?>
                 <!-- Menu -->
-                <div class="sub-container-2 category-2 ">
-                    <div class="menu-container">
-                        <div class="menu-card">
-                            <img src="../Assest/biriyani.jpeg" alt="">
-                            <div>
-                                <h3>Sri Lanka</h3>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, laboriosam? Vero recusandae cum unde quo repellendus illo dolorem tempore? Totam nobis quibusdam molestias blanditiis accusantium fuga praesentium veritatis ullam quam.</p>
-                                <div class="card-bottom">
-                                    <h3>LKR 1750</h3>
-                                    <span>
-                                        <a href=""><i class="fa-regular fa-pen-to-square"></i></a>
-                                        <a href=""><i class="fa-solid fa-trash"></i></a>
-                                    </span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="menu-card">
-                            <img src="../Assest/biriyani.jpeg" alt="">
-                            <div>
-                                <h3>Sri Lanka</h3>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, laboriosam? Vero recusandae cum unde quo repellendus illo dolorem tempore? Totam nobis quibusdam molestias blanditiis accusantium fuga praesentium veritatis ullam quam.</p>
-                                <div class="card-bottom">
-                                    <h3>LKR 1750</h3>
-                                    <span>
-                                        <a href=""><i class="fa-regular fa-pen-to-square"></i></a>
-                                        <a href=""><i class="fa-solid fa-trash"></i></a>
-                                    </span>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
+                <?php include_once('components\content-2\menu-2.php') ?>
                 <!-- Order -->
                 <div class="sub-container-2 category-2 ">
                     <div class="order-container">
@@ -405,5 +345,8 @@ $category = new Category();
         echo "<script>tabChange(1)</script>";
         unset($_SESSION['cat-menu']);
     }
-
+    if(isset($_SESSION['menu-view'])){
+        echo "<script>tabChange(2)</script>";
+        unset($_SESSION["menu-view"]);
+    }
     ?>

@@ -12,4 +12,11 @@
         $_SESSION['cat-menu']='2';
         header('location:'.SITEURL.'admin-gc');
     }
+    if(isset($_GET['menuDel'])){
+        $menuID = $_GET['menuDel'];
+        $menu = new Menu();
+        $menu->menuDelete($menuID);
+        $_SESSION['menu-view']='2';
+        header('location:'.SITEURL.'admin-gc');
+    }
 ?>
