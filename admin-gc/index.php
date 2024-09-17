@@ -12,7 +12,7 @@
         href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
     <!-- Link Css -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../style/admin.css?v=<?php echo time() ?>">
     <!-- fonts -->
     <script src="https://kit.fontawesome.com/e82ac91667.js" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
@@ -37,6 +37,7 @@
         </div>
         <div class="content">
             <div class="content-1">
+                <!-- Dashboard -->
                 <div class="sub-content-1 orverview-1 active-1">
                     <h1>Orverview</h1>
                     <div class="detail-container">
@@ -489,7 +490,7 @@
     </div>
 
 
-    <script src="script.js"></script>
+    <script src="../script/admin.js?v=<?php echo $time ?>"></script>
 </body>
 
 </html>
