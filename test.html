@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Hover Effect</title>
+    <style>
+        .image-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 300px;
+            overflow: hidden;
+        }
+
+        .image-container img {
+            width: 10%;
+            height: 100%;
+            object-fit: cover;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .image-container img:hover {
+            width: 30%;
+        }
+
+        .image-container img:not(:hover) {
+            width: 7%;
+        }
+    </style>
+</head>
+<body>
+
+<div class="image-container">
+    <img src="Assest/burger.jpg" alt="Image 1">
+    <img src="Assest/burger.jpg" alt="Image 2">
+    <img src="Assest/burger.jpg" alt="Image 3">
+    <img src="Assest/burger.jpg" alt="Image 4">
+    <img src="Assest/burger.jpg" alt="Image 5">
+    <img src="Assest/burger.jpg" alt="Image 6">
+    <img src="Assest/burger.jpg" alt="Image 7">
+    <img src="Assest/burger.jpg" alt="Image 8">
+    <img src="Assest/burger.jpg" alt="Image 9">
+    <img src="Assest/burger.jpg" alt="Image 10">
+</div>
+
+</body>
+</html>
