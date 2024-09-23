@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Image Hover Effect</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .image-container {
+      display: flex;
+      width: 80%;
+      gap: 10px;
+    }
+
+    .image-box {
+      position: relative;
+      width: 20%;
+      height: 300px;
+      transition: width 0.5s ease;
+      overflow: hidden;
+    }
+
+    .image-box .content {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      padding: 10px;
+      background: linear-gradient(transparent, rgba(0, 0, 0, 0.7));
+      color: white;
+      text-align: center;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .image-box:hover .content {
+      opacity: 1;
+    }
+
+    .image-box:hover {
+      width: 35%;
+    }
+
+    .image-box:not(:hover) {
+      width: 15%;
+    }
+
+    /* Different Images for Each Container */
+    #image1 {
+      background: url('Assest/burger.jpg') no-repeat center center/cover;
+    }
+
+    #image2 {
+      background: url('Assest/biriyani.jpeg') no-repeat center center/cover;
+    }
+
+    #image3 {
+      background: url('Assest/cafe-chain-3-1.png') no-repeat center center/cover;
+    }
+
+    #image4 {
+      background: url('Assest/delicious-burger-with-fresh-ingredients_23-2150857908.avif') no-repeat center center/cover;
+    }
+
+    #image5 {
+      background: url('Assest/burger.jpg') no-repeat center center/cover;
+    }
+  </style>
+</head>
+<body>
+  <div class="image-container">
+    <div class="image-box" id="image1">
+      <div class="content">
+        <h2>Title 1</h2>
+        <p>This is the first image.</p>
+      </div>
+    </div>
+    <div class="image-box" id="image2">
+      <div class="content">
+        <h2>Title 2</h2>
+        <p>This is the second image.</p>
+      </div>
+    </div>
+    <div class="image-box" id="image3">
+      <div class="content">
+        <h2>Title 3</h2>
+        <p>This is the third image.</p>
+      </div>
+    </div>
+    <div class="image-box" id="image4">
+      <div class="content">
+        <h2>Title 4</h2>
+        <p>This is the fourth image.</p>
+      </div>
+    </div>
+    <div class="image-box" id="image5">
+      <div class="content">
+        <h2>Title 5</h2>
+        <p>This is the fifth image.</p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

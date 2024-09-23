@@ -33,24 +33,41 @@ body {
     overflow-x: hidden;
     color: var(--c-third);
 }
-button{
+
+button {
     background-color: var(--c-first);
     color: var(--c-fourth);
     border: 1px solid var(--c-fourth);
     padding: 5px 10px;
     border-radius: 14px;
 }
-button:hover{
+
+button:hover {
     background-color: var(--c-fourth);
     color: var(--c-first);
 }
+/* reusable */
+.btn{
+    background-color: var(--c-second);
+    padding: 5px 10px;
+    color: var(--c-fourth);
+    border-radius: 8px;
+
+}
+section{
+    background-color: var(--c-fourth);
+    height: 100vh;
+    width: 100vw;
+}
+
 /* top container */
-.top-container{
+.top-container {
     display: flex;
     background-color: var(--c-first);
     height: 15vh;
 }
-.top-wrapper{
+
+.top-wrapper {
     margin: 0 10vw;
     width: 100%;
     display: flex;
@@ -58,7 +75,8 @@ button:hover{
     justify-content: space-between;
     margin-bottom: 2vh;
 }
-.contact-wrapper{
+
+.contact-wrapper {
     background-color: var(--c-third);
     color: var(--c-first);
     /* padding: 10px 20px; */
@@ -70,20 +88,26 @@ button:hover{
     flex-direction: column;
     justify-content: center;
 }
-.contact-wrapper p{
+
+.contact-wrapper p {
     font-size: 0.7rem;
 }
-.contact-wrapper h3{
+
+.contact-wrapper h3 {
     font-size: 0.8rem;
 }
+
 .logo h1 {
     font-size: 1.5rem;
 }
-.logo h1 i,.logo h1 span{
+
+.logo h1 i,
+.logo h1 span {
     font-size: 1.7rem;
     margin-left: 10px;
 }
-.action-container{
+
+.action-container {
     background-color: var(--c-third);
     width: 12vw;
     height: 5vh;
@@ -93,21 +117,24 @@ button:hover{
     border-radius: 30px;
     gap: 1.5vh;
 }
-.action-container i{
+
+.action-container i {
     color: var(--c-first);
     font-size: 1.6rem;
 }
+
 /* navigation bar */
-nav{
+nav {
     position: absolute;
-    margin:0 10vw;
+    margin: 0 10vw;
     margin-top: -1vh;
     width: 80vw;
     height: 5vh;
     background-color: var(--c-second);
     border-radius: 8px;
 }
-nav ul{
+
+nav ul {
     margin: 0 10vw;
     width: 60vw;
     height: 5vh;
@@ -115,17 +142,21 @@ nav ul{
     justify-content: space-between;
     align-items: center;
 }
-nav ul li a{
+
+nav ul li a {
     display: flex;
     align-items: center;
     gap: 5px;
     color: var(--c-first);
 }
-nav ul li a h3 ,nav ul li a i {
+
+nav ul li a h3,
+nav ul li a i {
     font-size: 1.4rem;
 }
+
 /* header */
-.header-section{
+.header-section {
     background-color: var(--c-fourth);
     width: 100vw;
     height: 85vh;
@@ -133,28 +164,80 @@ nav ul li a h3 ,nav ul li a i {
     align-items: center;
     justify-content: center;
 }
-.image-wrapper
-{
-    width: 80vw;
+
+.image-wrapper {
+    width: 90vw;
     background-color: var(--c-first);
-    height: 50vh;
+    height: 70vh;
     display: flex;
     overflow: hidden;
+    border-radius: 14px;
 }
-.image-container img {
-    height: 50vh;
-    width: 20vw;
-    object-fit: cover;
-    transition: all 0.3s ease;
-    cursor: pointer;
+
+.image-box {
+    position: relative;
+    width: 15vw;
+    height: 70vh;
+    transition: width 0.5s ease;
+    overflow: hidden;
 }
-.image-container p{
-    margin-top: -5vh;
-    color: var(--c-first);
+
+.image-box .content {
+    position: absolute;
+    bottom: 0;
+    width: 23vw;
+    height: 30vh;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.808),#000000ab,#0000006c,#000000);
+    color: white;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
-.image-container:hover img{
-    width: 30vw;
+.image-box .content p{
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+    width: 80%;
 }
-.image-container:not(:hover) {
-    width: 20vw;
+.image-box .content h2{
+    font-size: 1.5rem;
+}
+
+.image-box:hover .content {
+    opacity: 1;
+}
+
+.image-box:hover {
+    width: 25vw;
+}
+
+.image-box:not(:hover) {
+    width: 15vw;
+}
+
+/* Different Images for Each Container */
+#image1 {
+    background: url('../Assest/burger.jpg') no-repeat center center/cover;
+}
+
+#image2 {
+    background: url('../Assest/coffee.jpg') no-repeat center center/cover;
+}
+
+#image3 {
+    background: url('../Assest/pizza.jpg') no-repeat center center/cover;
+}
+
+#image4 {
+    background: url('../Assest/milkshake.jpg') no-repeat center center/cover;
+}
+
+#image5 {
+    background: url('../Assest/Dinner-Rolls-Basket.jpg') no-repeat center center/cover;
+}
+#image6 {
+    background: url('../Assest/seafood.jpg') no-repeat center center/cover;
 }
