@@ -241,3 +241,88 @@ nav ul li a i {
 #image6 {
     background: url('../Assest/seafood.jpg') no-repeat center center/cover;
 }
+/* aboutus section */
+.welcome-wrapper{
+    width: 100vw;
+    height: 30vh;
+    display: flex;
+    background-color: var(--c-first);
+}
+.welcome-txt-container{
+    width: 50vw;
+    margin: 5vh 5vw;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    gap: 20px;
+}
+.welcome-txt-container h1{
+    font-size: 1.2rem;
+}
+.img img{
+    width: 40vw;
+    height: 30vh;
+    object-fit: cover;
+}
+/* about section - chef */
+.chef-wrapper{
+    width: 100vw;
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+}
+.Chef-container{
+    background-color: #000000;
+    display: flex;
+    width: 65vw;
+    gap: 20px;
+    align-items: center;
+}
+.chef-img-wrapper img{
+    height: 65vh;
+    width: 35vw;
+    margin-left: 2.5vh;
+}
+.Chef-container div{
+    margin-right: 10px;
+}
+.Chef-container div h1{
+    font-size: 2rem;
+    color: var(--c-second);
+}
+.Chef-container h2{
+    position: relative;
+    margin-top: -10px;
+    color: rgba(255, 255, 255, 0.575);
+    margin-bottom: 2vh;
+}
+.Chef-container p{
+    font-size: 0.8rem;
+}
+/* order details */
+.order-details-wrapper{
+    width: 100vw;
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    background-color: var(--c-third);
+}
+.order-details-container{
+    width: 75vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.left-words h1 {
+    font-size: 4rem;
+    color: var(--c-first);
+}
+.left-words p ,.right-text p{
+    color: var(--c-second);
+    
+}
+.right-text h1{
+    font-size: 2rem;
+    color: #000000;
+}
