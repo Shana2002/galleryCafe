@@ -33,18 +33,10 @@ body {
     overflow-x: hidden;
     color: var(--c-third);
 }
-
-button {
-    background-color: var(--c-first);
-    color: var(--c-fourth);
-    border: 1px solid var(--c-fourth);
-    padding: 5px 10px;
-    border-radius: 14px;
-}
-
-button:hover {
-    background-color: var(--c-fourth);
-    color: var(--c-first);
+button{
+    padding: 0;
+    border: none;
+    background: none;
 }
 /* reusable */
 .btn{
@@ -121,6 +113,7 @@ section{
 .action-container i {
     color: var(--c-first);
     font-size: 1.6rem;
+    cursor: pointer;
 }
 
 /* navigation bar */
@@ -312,7 +305,7 @@ nav ul li a i {
     width: 75vw;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
 }
 .left-words h1 {
     font-size: 4rem;
@@ -325,4 +318,174 @@ nav ul li a i {
 .right-text h1{
     font-size: 2rem;
     color: #000000;
+}
+.left-words{
+    width: 20vw;
+}
+/* social media */
+.social-media-wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.social-media-wrapper h1{
+    margin: 3vh 0px;
+    font-size: 1.7rem;
+}
+.social-card-wrapper{
+    display: flex;
+    gap: 3vw;
+}
+.social-media-card{
+    margin-top: 5vh;
+    width: 20vw;
+    height: 20vh;
+    display: flex;
+    background-color: var(--c-third);
+    justify-content: space-around;
+    align-items: center;
+    color: var(--c-first);
+    border-radius: 14px;
+}
+.social-media-card img{
+    height: 15vh;
+    width: 8vw;
+}
+/* footer */
+.footer{
+    width: 100vw;
+    height: 40vh;
+    background-color: var(--c-first);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.footer-container{
+    width: 60vw;
+    display: flex;
+    justify-content: space-around;
+}
+.footer-container h3{
+    font-size: 1.7rem;
+    margin-bottom: 2vh;
+    color: var(--c-second);
+}
+.footer-container ul{
+    display: flex;
+    flex-direction: column;
+    gap: 1vh;
+}
+.information li a{
+    color: var(--c-third);
+}
+.getin-touch li{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+.footer-caption{
+    background-color: #000000;
+    color: var(--c-second);
+    display: flex;
+    justify-content: center;
+}
+
+/* login form */
+.login-form{
+    position: fixed;
+    display: none;
+    top: -100vh;
+    left: 0;
+    height: 100vh;
+    background-color: var(--c-third);
+    width: 100vw;
+    opacity: 0;
+    transition: all 0.5s ease; /* Smooth transition */
+}
+#login-form.show {
+    display: block;
+    top: 0; /* Move down to 20% from the top */
+    opacity: 1;
+}
+.closebtn{
+    margin-top: 8.8vh;
+    color: var(--c-first);
+    position: absolute;
+    right: 0;
+    margin-right: 18.7vw;
+    cursor: pointer;
+}
+.closebtn i{
+    font-size: 2rem;
+    border: 2px solid var(--c-first);
+    padding: 5px 10px;
+    border-radius: 8px;
+}
+.logiin-wrapper{
+    margin-top: 20vh;
+    width: 40vw;
+    margin-left: 30vw;
+    height: 50vh;
+    color: var(--c-first);
+}
+.btn-container{
+    display: flex;
+    justify-content: space-around;
+}
+.act-btn{
+    font-size: 2rem;
+    margin-bottom: 8vh;
+}
+.active-act{
+    padding: 0px 2vw;
+    background-color: var(--c-second);
+    border-radius: 14px;
+    
+}
+.form-continer form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3vh;
+}
+.form-continer form div{
+    display: flex;
+    flex-direction: column;
+}
+.form-continer form div input{
+    width: 20vw;
+    background-color: var(--c-fifth);
+    border: none;
+    padding: 2px 5px;
+    border-radius: 8px;
+}
+.form-container{
+    display: none;
+    transition: all 0.2 ease;
+}
+.active-form{
+    display: block;
+}
+input[type=submit]{
+    width: 20vw;
+    font-size: 1.3rem;
+    height: 4vh;
+    background-color: var(--c-third);
+    border: 2px solid var(--c-second);
+    border-radius: 8px;
+}
+input[type=submit]:hover{
+    background-color: var(--c-second);
+    color: var(--c-third);
+    transition: all 0.2s ease-in-out;
+}
+textarea{
+    width: 20vw;
+    background-color: var(--c-fifth);
+    border: none;
+    padding: 2px 5px;
+    border-radius: 8px;
+}
+input:focus , textarea:focus{
+    outline-color: transparent;
 }
