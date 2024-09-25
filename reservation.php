@@ -13,11 +13,10 @@
     </div>
     <!-- The "Book Reservation" button -->
     <button class="book-btn" id="bookBtn">Book Reservation</button>
-    
+    <div class="gradient-background"></div>
     <!-- Reservation form -->
     <div class="reservation-form" id="reservationForm">
     <button class="close-btn" id="closeBtn">&times;</button>
-      <h2>Reservation Form</h2>
       <form>
         <label for="name">Name:</label>
         <input type="text" id="name" name="name" required>
@@ -28,12 +27,12 @@
         <label for="date">Date:</label>
         <input type="date" id="date" name="date" required>
         
-        <button type="submit">Submit</button>
+        <input type="submit" value="Add Reservation" class="ressub">
       </form>
     </div>
   </div>
 <!-- code end -->
-
+<?php include_once('components\getintouch.php') ?>
 <?php include_once('components\logsign-form.php') ?>
 <?php include_once('components\favourite.php') ?>
 <?php include_once('components\cart.php') ?>

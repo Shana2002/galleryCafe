@@ -1,3 +1,16 @@
+<?php 
+    include("class/Category.php");
+    include("class/Events.php");
+    include("class/Menu.php");
+    include("class/Promotion.php");
+    include("class/Users.php");
+    include("config/constant.php");
+    $category = new Category();
+    $menuClass = new Menu();
+    $promotion = new Promotion();
+    $event = new Events();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -6,6 +19,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style/style.css?v=<?php echo time() ?>">
     <script src="https://kit.fontawesome.com/e82ac91667.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+    
     <title>Gallery Cafe</title>
 </head>
 
@@ -23,8 +40,8 @@
             </div>
             <div class="action-container">
                 <a onclick="openLoginform()"><i class="fa-regular fa-user"></i></a>
-                <a onclick="openfav()"><i class="fa-regular fa-heart"></i></a>
-                <a onclick="opencart()"><i class="fa-solid fa-cart-shopping"></i></a>
+                <a onclick="openfav()"><i class="fa-regular fa-heart"></i><div class="action-item2"><p>0</p></div></a>
+                <a onclick="opencart()"><i class="fa-solid fa-cart-shopping"></i><div class="action-item2"><p>0</p></div></a>
                 <a onclick="opensearch()"><i class="fa-solid fa-magnifying-glass"></i></a>
             </div>
         </div>
@@ -40,14 +57,14 @@
                 <li><a href="reservation.php"><i class="fa-regular fa-bookmark"></i>
                     <h3>Reservation</h3>
                 </a></li>
-            <li><a href=""><i class="fa-solid fa-calendar-days"></i>
+            <li><a href="events.php"><i class="fa-solid fa-calendar-days"></i>
                     <h3>Events</h3>
                 </a></li>
-            <li><a href=""><i class="fa-solid fa-percent"></i>
+            <li><a href="promotions.php"><i class="fa-solid fa-percent"></i>
                     <h3>Promotions</h3>
                 </a></li>
-            <li><a href=""><i class="fa-regular fa-address-card"></i>
-                    <h3>About us</h3>
+            <li><a href="about.php"><i class="fa-regular fa-address-card"></i>
+                    <h3>Contact us</h3>
                 </a></li>
         </ul>
     </nav>
