@@ -4,63 +4,83 @@
 </div>
 <div class="event-wrapper">
     <div class="evnt-container">
-    <div class="evt-card">
-            <img src="Assest/party.jpg" alt="">
-            <h1>Magcal Evening</h1>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officiis sit sunt mollitia error accusantium iste. Ut consequuntur culpa, tenetur, dolore cumque alias iure porro eveniet illum provident sapiente magnam voluptate.</p>
-            <h3>On</h3>
-            <h3>27th Octomber 2024</h3>
-        </div>
-        <div class="evt-card">
-            <img src="Assest/party.jpg" alt="">
-            <h1>Magcal Evening</h1>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officiis sit sunt mollitia error accusantium iste. Ut consequuntur culpa, tenetur, dolore cumque alias iure porro eveniet illum provident sapiente magnam voluptate.</p>
-            <h3>On</h3>
-            <h3>27th Octomber 2024</h3>
-        </div>
-        <div class="evt-card">
-            <img src="Assest/party.jpg" alt="">
-            <h1>Magcal Evening</h1>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officiis sit sunt mollitia error accusantium iste. Ut consequuntur culpa, tenetur, dolore cumque alias iure porro eveniet illum provident sapiente magnam voluptate.</p>
-            <h3>On</h3>
-            <h3>27th Octomber 2024</h3>
-        </div>
-        <div class="evt-card">
-            <img src="Assest/party.jpg" alt="">
-            <h1>Magcal Evening</h1>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officiis sit sunt mollitia error accusantium iste. Ut consequuntur culpa, tenetur, dolore cumque alias iure porro eveniet illum provident sapiente magnam voluptate.</p>
-            <h3>On</h3>
-            <h3>27th Octomber 2024</h3>
-        </div>
-        <div class="evt-card">
-            <img src="Assest/party.jpg" alt="">
-            <h1>Magcal Evening</h1>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officiis sit sunt mollitia error accusantium iste. Ut consequuntur culpa, tenetur, dolore cumque alias iure porro eveniet illum provident sapiente magnam voluptate.</p>
-            <h3>On</h3>
-            <h3>27th Octomber 2024</h3>
-        </div>
-        <div class="evt-card">
-            <img src="Assest/party.jpg" alt="">
-            <h1>Magcal Evening</h1>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officiis sit sunt mollitia error accusantium iste. Ut consequuntur culpa, tenetur, dolore cumque alias iure porro eveniet illum provident sapiente magnam voluptate.</p>
-            <h3>On</h3>
-            <h3>27th Octomber 2024</h3>
-        </div>
-        <div class="evt-card">
-            <img src="Assest/party.jpg" alt="">
-            <h1>Magcal Evening</h1>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officiis sit sunt mollitia error accusantium iste. Ut consequuntur culpa, tenetur, dolore cumque alias iure porro eveniet illum provident sapiente magnam voluptate.</p>
-            <h3>On</h3>
-            <h3>27th Octomber 2024</h3>
-        </div>
-        <div class="evt-card">
-            <img src="Assest/party.jpg" alt="">
-            <h1>Magcal Evening</h1>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officiis sit sunt mollitia error accusantium iste. Ut consequuntur culpa, tenetur, dolore cumque alias iure porro eveniet illum provident sapiente magnam voluptate.</p>
-            <h3>On</h3>
-            <h3>27th Octomber 2024</h3>
-        </div>
+        <?php
+
+
+        if ($event->viewEvents() == null) {
+        } else {
+            $eventArray = $event->viewEvents();
+            foreach ($eventArray as $row) {
+                $id = $row['id'];
+                $title = $row['title'];
+                $description = $row['description'];
+                $image = $row['image'];
+                $startDate = $row['sDate'];
+                $sTime = $row['sTime'];
+        ?>
+                <div class="evt-card">
+                    <img src="images/event/<?php echo $image ?>" alt="">
+                    <h1><?php echo $title ?></h1>
+                    <p><?php echo $description ?></p>
+                    <h3>On</h3>
+                    <h3><?php echo $startDate ?></h3>
+                </div>
+        <?php
+            }
+        }
+
+        ?>
         
+        <!-- <div class="evt-card">
+            <img src="Assest/party.jpg" alt="">
+            <h1>Magcal Evening</h1>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officiis sit sunt mollitia error accusantium iste. Ut consequuntur culpa, tenetur, dolore cumque alias iure porro eveniet illum provident sapiente magnam voluptate.</p>
+            <h3>On</h3>
+            <h3>27th Octomber 2024</h3>
+        </div>
+        <div class="evt-card">
+            <img src="Assest/party.jpg" alt="">
+            <h1>Magcal Evening</h1>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officiis sit sunt mollitia error accusantium iste. Ut consequuntur culpa, tenetur, dolore cumque alias iure porro eveniet illum provident sapiente magnam voluptate.</p>
+            <h3>On</h3>
+            <h3>27th Octomber 2024</h3>
+        </div>
+        <div class="evt-card">
+            <img src="Assest/party.jpg" alt="">
+            <h1>Magcal Evening</h1>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officiis sit sunt mollitia error accusantium iste. Ut consequuntur culpa, tenetur, dolore cumque alias iure porro eveniet illum provident sapiente magnam voluptate.</p>
+            <h3>On</h3>
+            <h3>27th Octomber 2024</h3>
+        </div>
+        <div class="evt-card">
+            <img src="Assest/party.jpg" alt="">
+            <h1>Magcal Evening</h1>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officiis sit sunt mollitia error accusantium iste. Ut consequuntur culpa, tenetur, dolore cumque alias iure porro eveniet illum provident sapiente magnam voluptate.</p>
+            <h3>On</h3>
+            <h3>27th Octomber 2024</h3>
+        </div>
+        <div class="evt-card">
+            <img src="Assest/party.jpg" alt="">
+            <h1>Magcal Evening</h1>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officiis sit sunt mollitia error accusantium iste. Ut consequuntur culpa, tenetur, dolore cumque alias iure porro eveniet illum provident sapiente magnam voluptate.</p>
+            <h3>On</h3>
+            <h3>27th Octomber 2024</h3>
+        </div>
+        <div class="evt-card">
+            <img src="Assest/party.jpg" alt="">
+            <h1>Magcal Evening</h1>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officiis sit sunt mollitia error accusantium iste. Ut consequuntur culpa, tenetur, dolore cumque alias iure porro eveniet illum provident sapiente magnam voluptate.</p>
+            <h3>On</h3>
+            <h3>27th Octomber 2024</h3>
+        </div>
+        <div class="evt-card">
+            <img src="Assest/party.jpg" alt="">
+            <h1>Magcal Evening</h1>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officiis sit sunt mollitia error accusantium iste. Ut consequuntur culpa, tenetur, dolore cumque alias iure porro eveniet illum provident sapiente magnam voluptate.</p>
+            <h3>On</h3>
+            <h3>27th Octomber 2024</h3>
+        </div> -->
+
     </div>
 </div>
 

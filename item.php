@@ -1,20 +1,38 @@
 <?php include_once('components\header.php') ?>
 <!-- Code here -->
+<?php
+    if (isset($_GET['id'])) {
+        $id = $_GET['id'];
+        $menuitem = $menuClass->menuSelectedview($id);
+        if ($menuitem) {
+            $name = $menuitem['name'];
+            $id = $menuitem['id'];
+            $description = $menuitem['description'];
+            $category = $menuitem['category'];
+            $price = $menuitem['price'];
+            $image = $menuitem['image'];
+        }
+    }
+    ?>
 <div class="title-container">
-    <h1>pizza</h1>
+    <h1><?php echo $name ?></h1>
 </div>
 <div class="item-wrapper">
+    
     <div class="item-container2">
-        <img src="Assest/pizza.jpg" alt="">
+        <img src="images/menu/<?php echo $image ?>" alt="">
         <div class="item-details">
-        <div>
-            <h1>pizza</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit id quisquam aliquam quae optio veniam aperiam molestias doloribus cum ullam. Quis quod obcaecati amet corrupti quisquam repudiandae voluptas pariatur aut.</p>
-            
-        </div>    
-        <div class="action-item">
+            <div>
+                <h1><?php echo $name ?></h1>
+                <p><?php echo $description ?></p>
+
+            </div>
+            <div class="action-item">
                 <a href=""><i class="fa-regular fa-heart"></i></a>
-                <a href="" class="add-cart-btn"><h2>LKR 1950</h2><h2>Add Cart</h2></a>
+                <a href="" class="add-cart-btn">
+                    <h2>LKR <?php echo $price ?></h2>
+                    <h2>Add Cart</h2>
+                </a>
             </div>
         </div>
     </div>

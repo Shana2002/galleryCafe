@@ -4,87 +4,47 @@
 </div>
 <div class="event-wrapper">
     <div class="evnt-container">
-    <div class="prom-card">
-            <img src="Assest/pizza.jpg" alt="">
-            <h1>Buy 1 Get 1 FREE</h1>
-            <p>Buy Large pan pizza and Get large pan pizza</p>
-            <div>
-                <h3>Till</h3>
-                <h3>27th Octomber 2024</h3>
-                <a href="menu.php">Get Offer</a>
-            </div>
-        </div>
-        <div class="prom-card">
-            <img src="Assest/pizza.jpg" alt="">
-            <h1>Buy 1 Get 1 FREE</h1>
-            <p>Buy Large pan pizza and Get large pan pizza</p>
-            <div>
-                <h3>Till</h3>
-                <h3>27th Octomber 2024</h3>
-                <a href="menu.php">Get Offer</a>
-            </div>
-        </div>
-        <div class="prom-card">
-            <img src="Assest/pizza.jpg" alt="">
-            <h1>Buy 1 Get 1 FREE</h1>
-            <p>Buy Large pan pizza and Get large pan pizza</p>
-            <div>
-                <h3>Till</h3>
-                <h3>27th Octomber 2024</h3>
-                <a href="menu.php">Get Offer</a>
-            </div>
-        </div>
-        <div class="prom-card">
-            <img src="Assest/pizza.jpg" alt="">
-            <h1>Buy 1 Get 1 FREE</h1>
-            <p>Buy Large pan pizza and Get large pan pizza</p>
-            <div>
-                <h3>Till</h3>
-                <h3>27th Octomber 2024</h3>
-                <a href="menu.php">Get Offer</a>
-            </div>
-        </div>
-        <div class="prom-card">
-            <img src="Assest/pizza.jpg" alt="">
-            <h1>Buy 1 Get 1 FREE</h1>
-            <p>Buy Large pan pizza and Get large pan pizza</p>
-            <div>
-                <h3>Till</h3>
-                <h3>27th Octomber 2024</h3>
-                <a href="menu.php">Get Offer</a>
-            </div>
-        </div>
-        <div class="prom-card">
-            <img src="Assest/pizza.jpg" alt="">
-            <h1>Buy 1 Get 1 FREE</h1>
-            <p>Buy Large pan pizza and Get large pan pizza</p>
-            <div>
-                <h3>Till</h3>
-                <h3>27th Octomber 2024</h3>
-                <a href="menu.php">Get Offer</a>
-            </div>
-        </div>
-        <div class="prom-card">
-            <img src="Assest/pizza.jpg" alt="">
-            <h1>Buy 1 Get 1 FREE</h1>
-            <p>Buy Large pan pizza and Get large pan pizza</p>
-            <div>
-                <h3>Till</h3>
-                <h3>27th Octomber 2024</h3>
-                <a href="menu.php">Get Offer</a>
-            </div>
-        </div>
-        <div class="prom-card">
-            <img src="Assest/pizza.jpg" alt="">
-            <h1>Buy 1 Get 1 FREE</h1>
-            <p>Buy Large pan pizza and Get large pan pizza</p>
-            <div>
-                <h3>Till</h3>
-                <h3>27th Octomber 2024</h3>
-                <a href="menu.php">Get Offer</a>
-            </div>
-        </div>
+        <?php
+
+        $promArray = $promotion->viewpromotions();
+        if ($promArray == null) {
+        } else {
+            foreach ($promArray as $row) {
+                $id = $row['id'];
+                $title = $row['title'];
+                $description = $row['description'];
+                $image = $row['image'];
+                $startDate = $row['start'];
+                $endDate = $row['end'];
+        ?>
+                <div class="prom-card">
+                    <img src="images/promotion/<?php echo $image ?>" alt="">
+                    <h1><?php echo $title ?></h1>
+                    <p><?php echo $description ?></p>
+                    <div>
+                        <h3>Till</h3>
+                        <h3><?php echo $endDate ?></h3>
+                        <a href="menu.php">Get Offer</a>
+                    </div>
+                </div>
+        <?php
+            }
+        }
+
+        ?>
+
         
+        <!-- <div class="prom-card">
+            <img src="Assest/pizza.jpg" alt="">
+            <h1>Buy 1 Get 1 FREE</h1>
+            <p>Buy Large pan pizza and Get large pan pizza</p>
+            <div>
+                <h3>Till</h3>
+                <h3>27th Octomber 2024</h3>
+                <a href="menu.php">Get Offer</a>
+            </div>
+        </div> -->
+
 
 
 

@@ -125,6 +125,7 @@ section{
     align-items: center;
     justify-content: center;
     border-radius: 50%;
+    cursor: pointer;
 }
 
 .action-container i {
@@ -797,12 +798,12 @@ input:focus , textarea:focus{
     font-size: 1.7rem;
 
 }
-.menu-card div a{
-    padding: 2px 4px;
-    color: var(--c-third);
-    background-color: red;
-    border-radius: 10px;
-    text-align: center;
+.menu-card div button[type=submit]{
+    padding: 2px 4px !important;
+    color: var(--c-third) !important;
+    background-color: red !important;
+    border-radius: 10px !important;
+    text-align: center !important;
 }
 /* reservation */
 .cover-image {
@@ -987,6 +988,8 @@ border: 1px solid rgba(202, 202, 202, 0.16);
     height: 85vh;
     background: url('../Assest/biriyani2.jpg') no-repeat center center;
     background-size: cover;
+    filter: blur(8px);
+    -webkit-filter: blur(8px);
 }
 .prom-card{
     position: relative;
@@ -1166,6 +1169,7 @@ border: 1px solid rgba(202, 202, 202, 0.16);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    width: 60vw;
 }
 .item-details h1{
     font-size: 2.5rem;
