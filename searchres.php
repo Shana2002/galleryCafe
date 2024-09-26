@@ -31,9 +31,9 @@
                                 <h1><?php echo $name ?></h1>
                                 <h2>LKR <?php echo $price ?></h2>
                                 <span class="submitcart">
-                                        <form action="">
+                                        <form action="Actions/add-cart.php" method="get">
                                             <input type="hidden" name="cart" value="<?php echo $id ?>">
-                                            <input type="hidden" name="menu" value="1">
+                                            <input type="hidden" name="search" value="<?php echo $search ?>">
                                             <button class="cart-add">Add to Cart</button>
                                         </form>
                                         <form action="Actions\favourite.php" method="get">

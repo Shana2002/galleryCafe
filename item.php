@@ -46,7 +46,7 @@ if (isset($_GET['id'])) {
                     }
                 }
                 ?>
-                <a href="" class="add-cart-btn">
+                <a href="Actions/add-cart.php?cart=<?php echo $id ?>&item=<?php echo $id ?>" class="add-cart-btn">
                     <h2>LKR <?php echo $price ?></h2>
                     <h2>Add Cart</h2>
                 </a>

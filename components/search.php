@@ -8,3 +8,4 @@
         </div>
 
     </div>
+    <?php include_once('components\log-out-ask.php') ?>

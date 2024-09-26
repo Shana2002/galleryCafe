@@ -22,4 +22,9 @@
         echo '<script>openfav()</script>';
         unset($_SESSION['openfav']);
     }
+    
+    if(isset($_SESSION['opencart'])){
+        echo '<script>directCart()</script>';
+        unset($_SESSION['opencart']);
+    }
 ?>

@@ -131,4 +131,18 @@ document.getElementById('bookBtn').addEventListener('click', function() {
     var form = document.getElementById('reservationForm');
     form.classList.remove('show-form');
   });
-  
+
+  function closelogout(){
+    document.getElementById('background-darker').style.display='none';
+    document.getElementById('log-out-ask-wrapper').style.display='none';
+  }
+  function showlogout(){
+    document.getElementById('background-darker').style.display='block';
+    document.getElementById('log-out-ask-wrapper').style.display='flex';
+  }
+  function directCart(){
+    const cartTab = document.getElementById('cart-tab');
+    cartTab.style.display = 'block'; // Make it visible first    
+    cartTab.classList.add('show'); // Trigger the animation
+        
+  }
