@@ -164,7 +164,7 @@ nav ul li a {
 
 nav ul li a h3,
 nav ul li a i {
-    font-size: 1.4rem;
+    font-size: 2.5vmin;
 }
 
 /* header */
@@ -1195,4 +1195,11 @@ border: 1px solid rgba(202, 202, 202, 0.16);
     font-size: 1.8rem;
     font-weight: bold;
     color:var(--c-first)
+}
+.notlog i{
+    color: #202938;
+}
+.error{
+    color: red;
+    font-size: .8rem;
 }

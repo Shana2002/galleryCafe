@@ -7,7 +7,11 @@
         </div>
         <div class="form-continer">
             <div class="form-container active-form">
-                <form action="" method="post">
+                
+                <form action="Actions/login.php" method="post">
+                    <?php if(isset($_SESSION['cus-psw-wrong'])){
+                        echo "<p class='error'>User Name or Password Wrong</p>";
+                    } ?>
                     <div>
                         <label for="username">User Name</label>
                         <input type="text" name="username" id="username" placeholder="Enter User Name" required>
@@ -20,7 +24,7 @@
                 </form>
             </div>
             <div class="form-container ">
-                <form action="" method="post">
+                <form action="Actions/signup.php" method="post">
                     <div>
                         <label for="name">Name</label>
                         <input type="text" name="name" id="name" placeholder="Enter Name" required>

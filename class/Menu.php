@@ -116,5 +116,37 @@
                 return false;
             }
         }
+        public function adddelfav($customer,$menuId){
+            if($this->viewfavourite($customer,$menuId)){
+                $sql = "DELETE FROM cus_favourite WHERE customer = '$customer' and menuID = '$menuId' )"; 
+                $res = mysqli_query($this->db,$sql); 
+            }else{
+                $sql = "INSERT INTO `cus_favourite`(`customer`, `menuID`) VALUES ('$customer','$menuId')"; 
+                $res = mysqli_query($this->db,$sql);
+            }
+            // if($res){
+            //     return true;
+            // }
+            // else{
+            //     return false;
+            // }
+        }
+        public function viewFavouriteAll($customer){
+            $sql = "SELECT * FROM cus_favourite WHERE customer = '$customer'";
+            $res = mysqli_query($this->db,$sql);
+            if(mysqli_num_rows($res)>0){
+                return mysqli_fetch_assoc($res);
+            }
+        }
+        public function viewfavourite($customer,$menuId){
+            $sql = "SELECT * FROM cus_favourite WHERE customer = '$customer' and menuID = '$menuId'";
+            $res = mysqli_query($this->db,$sql);
+            if(mysqli_num_rows($res)==1){
+                return true;
+            }
+            else{
+                return false;
+            }
+        }
     }
 ?>

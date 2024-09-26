@@ -113,6 +113,12 @@ formbtn.forEach((btn, index) => {
         formcont[index].classList.add('active-form');
     })
 })
+function showSign(){
+    formbtn.forEach(btn=>btn.classList.remove('active-act'));
+    formbtn[1].classList.add('active-act');
+    formcont.forEach(form => form.classList.remove('active-form'));
+    formcont[1].classList.add('active-form');
+}
 
 // Open the form when the 'Book Reservation' button is clicked
 document.getElementById('bookBtn').addEventListener('click', function() {

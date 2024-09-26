@@ -29,7 +29,7 @@ CREATE TABLE Gc_Events(
     eventDescription varchar(1000),
     eventDate DATE NOT NULL ,
     eventTime TIME not null,
-    promImage varchar(255) NOT NULL,
+    eventImage varchar(255) NOT NULL,
     PRIMARY KEY (eventId)
 );
 CREATE TABLE AdminUsers(
@@ -41,17 +41,18 @@ CREATE TABLE AdminUsers(
     PRIMARY KEY (userName)
 );
 CREATE TABLE Customers(
+    cusId int NOT NULL AUTO_INCREMENT,
 	cusname varchar(100) NOT NULL,
     cusEmail varchar(255) NOT NULL UNIQUE,
     cusAddress varchar(500) NOT NULL,
     cusMobile Varchar(12) NOT NULL UNIQUE,
     cusUsername varchar(50) NOT NULL UNIQUE,
     cusPassword varchar(100) NOT NULL,
-    CONSTRAINT pk_cus PRIMARY KEY (cusUsername , cusEmail)
+    CONSTRAINT pk_cus PRIMARY KEY (cusId , cusUsername , cusEmail)
  );
  CREATE TABLE Cus_Favourite(
- 	customer varchar(50) NOT NULL,
+ 	customer int NOT NULL,
    	menuID int ,
-    FOREIGN KEY (customer) REFERENCES Customers(cusUsername),
+    FOREIGN KEY (customer) REFERENCES Customers(cusId),
     FOREIGN KEY (menuID) REFERENCES Menus(menuId)
   );

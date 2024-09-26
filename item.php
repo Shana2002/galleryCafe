@@ -1,24 +1,24 @@
 <?php include_once('components\header.php') ?>
 <!-- Code here -->
 <?php
-    if (isset($_GET['id'])) {
-        $id = $_GET['id'];
-        $menuitem = $menuClass->menuSelectedview($id);
-        if ($menuitem) {
-            $name = $menuitem['name'];
-            $id = $menuitem['id'];
-            $description = $menuitem['description'];
-            $category = $menuitem['category'];
-            $price = $menuitem['price'];
-            $image = $menuitem['image'];
-        }
+if (isset($_GET['id'])) {
+    $id = $_GET['id'];
+    $menuitem = $menuClass->menuSelectedview($id);
+    if ($menuitem) {
+        $name = $menuitem['name'];
+        $id = $menuitem['id'];
+        $description = $menuitem['description'];
+        $category = $menuitem['category'];
+        $price = $menuitem['price'];
+        $image = $menuitem['image'];
     }
-    ?>
+}
+?>
 <div class="title-container">
     <h1><?php echo $name ?></h1>
 </div>
 <div class="item-wrapper">
-    
+
     <div class="item-container2">
         <img src="images/menu/<?php echo $image ?>" alt="">
         <div class="item-details">
@@ -28,7 +28,24 @@
 
             </div>
             <div class="action-item">
-                <a href=""><i class="fa-regular fa-heart"></i></a>
+                <?php
+                if (isset($_SESSION['cusId'])) {
+                    ?>
+                    <p class="notlog"><i class="fa-regular fa-heart"></i></p>
+                    <?php
+                } else {
+                    $cus =1;
+                    if ($menuClass->viewfavourite($cus, $id)) {
+                        ?>
+                        <a href=""><i class="fa-solid fa-heart"></i></a>
+                        <?php
+                    } else {
+                        ?>
+                        <a href=""><i class="fa-regular fa-heart"></i></a>
+                        <?php
+                    }
+                }
+                ?>
                 <a href="" class="add-cart-btn">
                     <h2>LKR <?php echo $price ?></h2>
                     <h2>Add Cart</h2>

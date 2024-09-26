@@ -39,7 +39,17 @@
                 <h1><i class="fa-solid fa-utensils fa-lg"></i><span>THE</span><br>Gallery Cafe</h1>
             </div>
             <div class="action-container">
-                <a onclick="openLoginform()"><i class="fa-regular fa-user"></i></a>
+                <?php if(isset($_SESSION['cusid'])){
+                    ?>
+                    <a href="">O</a>
+                    <?php
+                }else{
+                    ?>
+                    <a onclick="openLoginform()"><i class="fa-regular fa-user"></i></a>
+                    <?php
+                } 
+                ?>
+                
                 <a onclick="openfav()"><i class="fa-regular fa-heart"></i><div class="action-item2"><p>0</p></div></a>
                 <a onclick="opencart()"><i class="fa-solid fa-cart-shopping"></i><div class="action-item2"><p>0</p></div></a>
                 <a onclick="opensearch()"><i class="fa-solid fa-magnifying-glass"></i></a>
