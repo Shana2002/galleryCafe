@@ -30,14 +30,43 @@
                             $price = $row['price'];
                             $image = $row['image'];
                     ?>
-                            <div class="menu-card">
+                            <a href="item.php?id=<?php echo $id ?>" class="menu-card">
                                 <img src="images/menu/<?php echo $image ?>" alt="">
                                 <div>
                                     <h1><?php echo $name ?></h1>
                                     <h2>LKR <?php echo $price ?></h2>
-                                    <a href="">Add to cart</a>
+                                    <span class="submitcart">
+                                        <form action="">
+                                            <input type="hidden" name="cart" value="<?php echo $id ?>">
+                                            <input type="hidden" name="menu" value="1">
+                                            <button class="cart-add">Add to Cart</button>
+                                        </form>
+                                        <form action="Actions\favourite.php" method="get">
+                                            <input type="hidden" name="menuId" value="<?php echo $id ?>">
+                                            <input type="hidden" name="menusite" value="1">
+                                            <?php if(isset($_SESSION['cusid'])){
+                                                if($menuClass->viewfavourite($_SESSION['cusid'],$id)){
+                                                    ?>
+                                                        <button class="menu-fav"><i class="fa-solid fa-heart"></i></button>
+                                                    <?php
+                                                }
+                                                else{
+                                                    ?>
+                                                        <button class="menu-fav"><i class="fa-regular fa-heart"></i></button>
+                                                    <?php
+                                                }
+                                                }
+                                                else{
+                                                    ?>
+                                                        <button disabled="disabled"><i class="fa-regular fa-heart"></i></button>
+                                                    <?php
+                                                } 
+                                            ?>
+                                                
+                                        </form>
+                                    </span>
                                 </div>
-                            </div>
+                            </a>
                     <?php
                         }
                     }

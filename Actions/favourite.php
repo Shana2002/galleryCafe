@@ -11,8 +11,21 @@
             header('location:'.SITEURL.'searchres.php?search='.$search);
         }elseif(isset($_GET['item'])){
             $item = $_GET['item'];
-            header('location:'.SITEURL.'item.php?='.$search);
+            header('location:'.SITEURL.'item.php?id='.$item);
         }
+        elseif(isset($_GET['favtab'])){
+            $_SESSION['openfav']="0";
+            header('location:'.SITEURL);
+        }
+        elseif(isset($_GET['menusite'])){
+            header('location:'.SITEURL.'menu.php');
+        }
+        elseif(isset($_GET['searchres'])){
+            $searchres = $_GET['searchres'];
+            header('location:'.SITEURL.'searchres.php?search='.$searchres);
+        }
+        
+        
 
     }
 ?>

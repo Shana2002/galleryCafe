@@ -29,7 +29,7 @@ if (isset($_GET['id'])) {
             </div>
             <div class="action-item">
                 <?php
-                if (isset($_SESSION['cusId'])) {
+                if (!isset($_SESSION['cusid'])) {
                     ?>
                     <p class="notlog"><i class="fa-regular fa-heart"></i></p>
                     <?php
@@ -37,11 +37,11 @@ if (isset($_GET['id'])) {
                     $cus =1;
                     if ($menuClass->viewfavourite($cus, $id)) {
                         ?>
-                        <a href=""><i class="fa-solid fa-heart"></i></a>
+                        <a href="Actions/favourite.php?menuId=<?php echo $id ?>&item=<?php echo $id ?>"><i class="fa-solid fa-heart"></i></a>
                         <?php
                     } else {
                         ?>
-                        <a href=""><i class="fa-regular fa-heart"></i></a>
+                        <a href="Actions/favourite.php?menuId=<?php echo $id ?>&item=<?php echo $id ?>"><i class="fa-regular fa-heart"></i></a>
                         <?php
                     }
                 }

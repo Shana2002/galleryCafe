@@ -30,10 +30,36 @@
                             <div>
                                 <h1><?php echo $name ?></h1>
                                 <h2>LKR <?php echo $price ?></h2>
-                                <form action="add_to_cart.php" method="POST">
-                                    <input type="hidden" name="item_id" value="<?php echo $item_id; ?>">
-                                    <button type="submit">Add to cart</button>
-                                </form>
+                                <span class="submitcart">
+                                        <form action="">
+                                            <input type="hidden" name="cart" value="<?php echo $id ?>">
+                                            <input type="hidden" name="menu" value="1">
+                                            <button class="cart-add">Add to Cart</button>
+                                        </form>
+                                        <form action="Actions\favourite.php" method="get">
+                                            <input type="hidden" name="menuId" value="<?php echo $id ?>">
+                                            <input type="hidden" name="searchres" value="<?php echo $search ?>">
+                                            <?php if(isset($_SESSION['cusid'])){
+                                                if($menuClass->viewfavourite($_SESSION['cusid'],$id)){
+                                                    ?>
+                                                        <button class="menu-fav"><i class="fa-solid fa-heart"></i></button>
+                                                    <?php
+                                                }
+                                                else{
+                                                    ?>
+                                                        <button class="menu-fav"><i class="fa-regular fa-heart"></i></button>
+                                                    <?php
+                                                }
+                                                }
+                                                else{
+                                                    ?>
+                                                        <button disabled="disabled"><i class="fa-regular fa-heart"></i></button>
+                                                    <?php
+                                                } 
+                                            ?>
+                                                
+                                        </form>
+                                    </span>
                             </div>
                         </a>
             <?php

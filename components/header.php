@@ -41,7 +41,7 @@
             <div class="action-container">
                 <?php if(isset($_SESSION['cusid'])){
                     ?>
-                    <a href="">O</a>
+                    <a href=""><i class="fa-solid fa-arrow-right-from-bracket"></i></a>
                     <?php
                 }else{
                     ?>
@@ -50,7 +50,9 @@
                 } 
                 ?>
                 
-                <a onclick="openfav()"><i class="fa-regular fa-heart"></i><div class="action-item2"><p>0</p></div></a>
+                <a onclick="openfav()"><i class="fa-regular fa-heart"></i><div class="action-item2"><p><?php 
+                if(isset($_SESSION['cusid'])){echo count($menuClass->viewFavouriteAll($_SESSION['cusid']));}else{echo 0;}
+                 ?></p></div></a>
                 <a onclick="opencart()"><i class="fa-solid fa-cart-shopping"></i><div class="action-item2"><p>0</p></div></a>
                 <a onclick="opensearch()"><i class="fa-solid fa-magnifying-glass"></i></a>
             </div>

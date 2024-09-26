@@ -18,4 +18,8 @@
         echo "<script>openLoginform()</script>";
         unset($_SESSION['open-log']);
     }
+    if(isset($_SESSION['openfav'])){
+        echo '<script>openfav()</script>';
+        unset($_SESSION['openfav']);
+    }
 ?>
