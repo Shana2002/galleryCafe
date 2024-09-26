@@ -56,3 +56,15 @@ CREATE TABLE Customers(
     FOREIGN KEY (customer) REFERENCES Customers(cusId),
     FOREIGN KEY (menuID) REFERENCES Menus(menuId)
   );
+
+
+  INSERT INTO `categories`(`catName`, `catImg`) VALUES
+('Rice', 'rice.jpg'),
+('Noodles', 'noodles.jpg'),
+('Kottu', 'kottu.jpg'),
+('Sri Lankan', 'srilankan.jpg'),
+('Soup', 'soup.jpg'),
+('Salad', 'salad.jpg'),
+('Chinese', 'chinese.jpg'),
+('Desserts', 'desserts.jpg'),
+('Beverages', 'beverages.jpg');

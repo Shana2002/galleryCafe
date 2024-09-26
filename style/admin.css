@@ -382,8 +382,9 @@ textarea:focus {
 
 .menu-card img {
     height: 18vh;
-    min-width: 20%;
+    width: 10vw;
     margin: 1vh;
+    object-fit: cover;
 }
 
 .menu-card div {
@@ -402,6 +403,16 @@ textarea:focus {
 
 .card-bottom span a i {
     font-size: 1.3vmax;
+}
+.text-des{
+    
+    width: 37vw;
+    height: 8vh;
+    overflow: hidden;
+   display: -webkit-box;
+   -webkit-line-clamp: 3; /* number of lines to show */
+           line-clamp: 2; 
+   -webkit-box-orient: vertical;
 }
 
 /* order */

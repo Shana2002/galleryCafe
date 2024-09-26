@@ -327,7 +327,7 @@ nav ul li a i {
     justify-content: space-between;
 }
 .left-words h1 {
-    font-size: 4rem;
+    font-size: 3vmax;
     color: var(--c-first);
 }
 .left-words p ,.right-text p{
@@ -335,7 +335,7 @@ nav ul li a i {
     
 }
 .right-text h1{
-    font-size: 2rem;
+    font-size: 2vmax;
     color: #000000;
 }
 .left-words{
