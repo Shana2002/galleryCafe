@@ -436,11 +436,66 @@ textarea:focus {
     padding: 10px 5px;
     border-radius: 10px;
 }
+/* order table */
 .order-container{
     width: 95%;
     height: 80vh;
     overflow-y: auto;
 }
+.oreder-table1{
+    margin-top: 5vh;
+    width: 90%;
+    border-collapse: collapse;
+}
+/* .oreder-table1 th ,.oreder-table1 td{
+    border: 1px solid #000;
+} */
+.oreder-table1 tr td{
+    text-align: center;
+    border: none;
+    outline: none;
+    border-spacing: 0;
+}
+.oreder-table1 td , .item-info td{
+    padding: 10px 0px;
+}
+.oreder-table1 tr:nth-child(1){
+    font-size: 1.2rem;
+    margin-bottom: 0.5vh;
+}
+.main-row{
+    background-color: var(--c-fourth);
+}
+.expand-btn {
+    cursor: pointer;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 3px;
+}
+.item-info {
+    display: none;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 2s ease-out; /* Smooth transition for expanding */
+}
+.expanded {
+    max-height: 500px; /* Large enough to fit the content */
+}
+.item-info table{
+    border-collapse: collapse;
+    background-color: var(--c-third);
+}
+.btnaddprep{
+    padding: 2px 5px;
+    font-size: 0.8rem;
+    background-color: rgb(157, 255, 157);
+    color: var(--c-second);
+    border-radius: 8px;
+    text-align: center;
+}
+/* prom table */
 .oreder-table{
     margin-top: 5vh;
     width: 90%;

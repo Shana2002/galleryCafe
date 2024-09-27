@@ -84,7 +84,7 @@ class Customers extends Users
         $result = mysqli_query($this->db, $sql);
         if (mysqli_num_rows($result) == 1) {
             $row = mysqli_fetch_array($result);
-            $name = $row["name"];
+            $name = $row["cusname"];
             return $name;
         }
     }

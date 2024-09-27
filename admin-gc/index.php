@@ -5,10 +5,12 @@ include("../class/Menu.php");
 include("../class/Promotion.php");
 include("../class/Users.php");
 include("../config/constant.php");
+include("../class/Order.php");
 $category = new Category();
 $menuClass = new Menu();
 $promotion = new Promotion();
 $event = new Events();
+$order = new Order();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -132,8 +134,14 @@ $event = new Events();
         </div>
     </div>
 
-
-    <script src="../script/admin.js?v=<?php echo time() ?>"></script>
+    <?php 
+            $phpArray = array(55, 49, 20, 24, 45, 30, 30) ;
+            $js_array = json_encode($phpArray);
+        ?>
+        <script>var yValues = <?php echo $js_array ?></script>
+    <script src="../script/admin.js?v=<?php echo time() ?>">
+        
+    </script>
     
 
 
@@ -158,5 +166,11 @@ $event = new Events();
     if(isset($_SESSION['evt-view'])){
         echo "<script>tabChange(6)</script>";
         unset($_SESSION['evt-view']);
+    }
+    if(isset($_SESSION['openor'])){
+        $row = $_SESSION['openor'];
+        echo "<script>tabChange(3)</script>";
+        ?><script>toggleItems(<?php echo $row ?>)</script><?php
+        unset($_SESSION['openor']);
     }
     ?>

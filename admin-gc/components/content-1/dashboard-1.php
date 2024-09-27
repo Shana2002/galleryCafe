@@ -2,8 +2,8 @@
     <h1>Orverview</h1>
     <div class="detail-container">
         <div>
-            <h3>Current MMR</h3>
-            <h2>LKR 120K</h2>
+            <h3>Active Orders</h3>
+            <h2><?php echo count($order->displayAllperporder()) ?></h2>
         </div>
         <span>
             <i class="fa-solid fa-arrow-trend-up"></i>
@@ -12,8 +12,8 @@
     </div>
     <div class="detail-container">
         <div>
-            <h3>Current MMR</h3>
-            <h2>LKR 120K</h2>
+            <h3>Total Orders</h3>
+            <h2><?php echo $order->totalOrders() ?></h2>
         </div>
         <span>
             <i class="fa-solid fa-arrow-trend-up"></i>
@@ -22,8 +22,8 @@
     </div>
     <div class="detail-container">
         <div>
-            <h3>Current MMR</h3>
-            <h2>LKR 120K</h2>
+            <h3>Today MMR</h3>
+            <h2>LKR <?php echo $order->totalOrderToday() ?></h2>
         </div>
         <span>
             <i class="fa-solid fa-arrow-trend-up"></i>

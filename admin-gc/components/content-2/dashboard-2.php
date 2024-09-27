@@ -10,29 +10,29 @@
             <table class="recent-order-tb">
                 <tr>
                     <th>Customer</th>
-                    <th>Order Number</th>
+                    <th>BIll Number</th>
                     <th>Amount</th>
                 </tr>
-                <tr>
-                    <td>Kavishka</td>
-                    <td>#005583</td>
-                    <td>LKR 1000</td>
-                </tr>
-                <tr>
-                    <td>Kavishka</td>
-                    <td>#005583</td>
-                    <td>LKR 1000</td>
-                </tr>
-                <tr>
-                    <td>Kavishka</td>
-                    <td>#005583</td>
-                    <td>LKR 1000</td>
-                </tr>
-                <tr>
-                    <td>Kavishka</td>
-                    <td>#005583</td>
-                    <td>LKR 1000</td>
-                </tr>
+                <?php
+                $billArray2 = $order->displayBills("all");
+                if ($billArray2 == null) {
+                } else {
+                    $count = 0;
+                    foreach ($billArray2 as $bill) {
+                        if ($count == 4) {
+                            break;
+                        }
+                ?>
+                        <tr>
+                            <td><?php echo $bill['cusname'] ?></td>
+                            <td>#<?php echo $bill['id'] ?></td>
+                            <td>LKR <?php echo $bill['subtot'] ?></td>
+                        </tr>
+                <?php
+                        $count++;
+                    }
+                }
+                ?>
             </table>
         </div>
     </div>
