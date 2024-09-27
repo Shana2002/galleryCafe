@@ -17,7 +17,7 @@
                     <img src="../images/promotion/<?php echo $image ?>" alt="">
                     <div>
                         <h3><?php echo $title ?></h3>
-                        <p><?php echo $description ?></p>
+                        <p class="text-des"><?php echo $description ?></p>
                         <div class="card-bottom">
                             <div>
                                 <h5>Start Date: <?php echo $startDate ?></h5>

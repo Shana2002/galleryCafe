@@ -83,11 +83,11 @@ section{
 }
 
 .contact-wrapper p {
-    font-size: 0.7rem;
+    font-size: .4vmax;
 }
 
 .contact-wrapper h3 {
-    font-size: 0.8rem;
+    font-size: .7vmax;
 }
 
 .logo h1 {
@@ -130,7 +130,7 @@ section{
 
 .action-container i {
     color: var(--c-first);
-    font-size: 1.6rem;
+    font-size: 1.3vmax;
     cursor: pointer;
 }
 
@@ -566,9 +566,6 @@ input:focus , textarea:focus{
     padding: 2vh;
     gap: 20px;
 }
-.nofav{
-    
-}
 .nofav h1{
     font-size: 2rem;
     color: red;
@@ -680,10 +677,15 @@ input:focus , textarea:focus{
     background-color: var(--c-second);
     padding: 2vh;
     border-radius: 14px;
-}
-.check-container h1{
     color: var(--c-first);
     font-size: 1.3rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+.disabled-check{
+    background-color: var(--c-fifth);
+    cursor:not-allowed;
+
 }
 /* search tab */
 .search-tab{
@@ -793,11 +795,11 @@ input:focus , textarea:focus{
     width: 12vw;
 }
 .menu-card div h1{
-    font-size: 1.7rem;
+    font-size: 1.2vmax;
     text-transform: capitalize;
 }
 .menu-card div h2{
-    font-size: 1.7rem;
+    font-size: 1.2vmax;;
 }
 
 .submitcart{
@@ -856,19 +858,19 @@ input:focus , textarea:focus{
     background: linear-gradient(90deg, rgba(0, 0, 0, 0.671) 23%, rgba(0, 0, 0, 0.425) 69%, rgba(255, 255, 255, 0) 100%);
   }
   .details {
-    width: 30vw;
+    width: 40vw;
     position: absolute;
     left: 10vw;
-    bottom: 20vh;
+    bottom: 10vh;
     color: var(--c-third);
     z-index: 200;
   }
   .details h1{
-    font-size: 3rem;
+    font-size: 2vmax;
     text-transform: capitalize;
   }
   .details p{
-    font-size: .8rem;
+    font-size: .8vmax;
     text-align: justify;
   }
   .reservation-form {
