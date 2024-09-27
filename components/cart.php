@@ -45,6 +45,7 @@
                         </div>
                     </div>
                     <?php
+                    
                 }
             }
             ?>
@@ -67,9 +68,10 @@
 
         </div>
         <?php  
-            if(isset($_SESSION['cusid'])){
+            if(isset($_SESSION['cusid'])&& isset( $_SESSION['cartArray'])){
+                $_SESSION['subtot']=$subtotal;
                 ?>
-                <a class="check-container">Conform and pay LKR <?php echo $subtotal ?></a>
+                <a class="check-container" href="actions/add-order.php?order=1">Conform and pay LKR <?php echo $subtotal ?></a>
                 <?php
             }else{
                 ?>

@@ -79,6 +79,15 @@ class Customers extends Users
             return $cusDeatils;
         }
     }
+    public function cusname($id){
+        $sql = "SELECT * FROM customers WHERE cusid = '$id'";
+        $result = mysqli_query($this->db, $sql);
+        if (mysqli_num_rows($result) == 1) {
+            $row = mysqli_fetch_array($result);
+            $name = $row["name"];
+            return $name;
+        }
+    }
     public function changePassword($id, $password)
     {
         // UPDATE `customers` SET `id`='[value-1]'

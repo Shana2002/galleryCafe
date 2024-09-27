@@ -56,6 +56,27 @@ CREATE TABLE Customers(
     FOREIGN KEY (customer) REFERENCES Customers(cusId),
     FOREIGN KEY (menuID) REFERENCES Menus(menuId)
   );
+CREATE TABLE Bills (
+	billId int NOT NULL AUTO_INCREMENT,
+    cusId int NOT NULL,
+    subTotal int NOT NULL,
+    billdate date NOT NULL,
+    billtime time NOT NULL,
+    billStatus varchar(20) DEFAULT 'get order',
+    PRIMARY KEY (billId),
+    FOREIGN KEY (cusId) REFERENCES Customers(cusId)
+);
+CREATE TABLE billorder (
+	orderId int NOT NULL AUTO_INCREMENT,
+    billId int NOT NULL,
+    menuId int NOT NULL,
+    qty int NOT NULL,
+    orderStatus varchar(20) DEFAULT 'get order',
+    PRIMARY KEY (orderId),
+    FOREIGN KEY (billId) REFERENCES Bills(billId),
+    FOREIGN KEY (menuId) REFERENCES Menus(menuId)
+)
+
 
 
   INSERT INTO `categories`(`catName`, `catImg`) VALUES
