@@ -25,7 +25,6 @@ if (isset($_GET['id'])) {
             <div>
                 <h1><?php echo $name ?></h1>
                 <p><?php echo $description ?></p>
-
             </div>
             <div class="action-item">
                 <?php
@@ -34,7 +33,7 @@ if (isset($_GET['id'])) {
                     <p class="notlog"><i class="fa-regular fa-heart"></i></p>
                     <?php
                 } else {
-                    $cus =1;
+                    $cus =$_SESSION['cusid'];
                     if ($menuClass->viewfavourite($cus, $id)) {
                         ?>
                         <a href="Actions/favourite.php?menuId=<?php echo $id ?>&item=<?php echo $id ?>"><i class="fa-solid fa-heart"></i></a>

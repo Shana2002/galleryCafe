@@ -3,7 +3,7 @@
     <div class="detail-container">
         <div>
             <h3>Active Orders</h3>
-            <h2><?php echo count($order->displayAllperporder()) ?></h2>
+            <h2><?php  if($order->displayAllperporder()==null){echo 0;}else{echo count($order->displayAllperporder());}  ?></h2>
         </div>
         <span>
             <i class="fa-solid fa-arrow-trend-up"></i>
