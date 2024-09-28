@@ -17,17 +17,27 @@
     <!-- Reservation form -->
     <div class="reservation-form" id="reservationForm">
     <button class="close-btn" id="closeBtn">&times;</button>
-      <form>
+      <form action="Actions/add-reservation.php" method="post">
         <label for="name">Name:</label>
         <input type="text" id="name" name="name" required>
         
         <label for="email">Email:</label>
         <input type="email" id="email" name="email" required>
         
+        <label for="phone">Phone</label>
+        <input type="tel" name="tel" id="tel">
+
         <label for="date">Date:</label>
         <input type="date" id="date" name="date" required>
         
-        <input type="submit" value="Add Reservation" class="ressub">
+        <label for="time">Time:</label>
+        <input type="time" id="time" name="time" required>
+
+        <label for="msg">Specail Massage</label>
+        <textarea name="msg" id="msg"></textarea>
+
+
+        <input type="submit" name="add-sub" value="Add Reservation" class="ressub">
       </form>
     </div>
   </div>

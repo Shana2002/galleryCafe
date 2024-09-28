@@ -75,8 +75,17 @@ CREATE TABLE billorder (
     PRIMARY KEY (orderId),
     FOREIGN KEY (billId) REFERENCES Bills(billId),
     FOREIGN KEY (menuId) REFERENCES Menus(menuId)
-)
-
+);
+CREATE TABLE cusreservation(
+	reservationId int NOT NULL AUTO_INCREMENT,
+    name varchar(100) NOT NULL ,
+    email varchar(100) NOT NULL,
+    mobile varchar(13) NOT NULL,
+    resdate DATE not NULL,
+    restime TIME NOT NULL,
+    msg varchar(1000),
+    PRIMARY KEY (reservationId)
+);
 
 
   INSERT INTO `categories`(`catName`, `catImg`) VALUES
