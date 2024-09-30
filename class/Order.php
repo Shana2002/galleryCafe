@@ -106,5 +106,34 @@ class Order{
                 return mysqli_fetch_assoc($res)['total_amount_today'];
             }
         }
+        // Show Reservation
+
+        public function showReservation($type){
+            // INSERT INTO `cusreservation`(`reservationId`, `name`, `email`, `mobile`, `resdate`, `restime`, `msg`)
+            if($type == 'today'){
+                $sql = "SELECT * FROM cusreservation WHERE resdate=CURDATE()";
+            }
+            else{
+                $sql = 'SELECT * FROM cusreservation';
+            }
+            $res = mysqli_query($this->db, $sql);
+            if(mysqli_num_rows($res)> 0){
+                // `orderId`, `billId`, `menuId`, `qty`, `orderStatus`
+                $count = 0;
+                while($row = mysqli_fetch_array($res)){
+                    $id = $row['reservationId'];
+                    $name = $row['name'];
+                    $date = $row['resdate'];
+                    $time = $row['restime'];
+                    $msg = $row['msg'];
+                    $email = $row['email'];
+                    $mobile = $row['mobile'];
+                    $categoryDetails[$count]=["id"=>$id,"name"=>$name,"date"=>$date,"time"=>$time,"msg"=>$msg,"email"=>$email,"mobile"=>$mobile];
+                    $count++;
+                    
+                }
+                return $categoryDetails;
+            }
+        }
 }
 ?>

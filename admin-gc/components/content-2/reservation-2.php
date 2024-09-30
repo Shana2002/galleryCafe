@@ -7,12 +7,27 @@
                 <th>Date</th>
                 <th>Time</th>
             </tr>
-            <tr>
-                <td>001</td>
-                <td>Hansaka Ravishan</td>
-                <td>C2024/07/23</td>
-                <td>4.00pm</td>
-            </tr>
+            <?php
+            $resArray = $order->showReservation('all');
+            if ($resArray == null) {
+            } else {
+                foreach ($resArray as $reservation) {
+                    $id = $reservation['id'];
+                    $name = $reservation['name'];
+                    $date = $reservation['date'];
+                    $time = $reservation['time'];
+                }
+            ?>
+                <tr>
+                    <td><?php echo $id ?></td>
+                    <td><?php echo $name ?></td>
+                    <td><?php echo $date ?></td>
+                    <td><?php echo $time ?></td>
+                </tr>
+            <?php
+            }
+            ?>
+
 
         </table>
     </div>
