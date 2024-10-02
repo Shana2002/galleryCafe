@@ -10,6 +10,6 @@
         <li><a class="nav-btn"><i class="fa-regular fa-calendar-days"></i>Events</a></li>
         <li><a class="nav-btn"><i class="fa-solid fa-users"></i>Users</a></li>
         <li><a class="nav-btn"><i class="fa-solid fa-screwdriver-wrench"></i>Setting</a></li>
-        <li><a class="logout-btn"><i class="fa-solid fa-arrow-right-from-bracket"></i>Log out</a></li>
+        <li><a href="action/log-out.php" class="logout-btn"><i class="fa-solid fa-arrow-right-from-bracket"></i>Log out</a></li>
     </ul>
 </div>

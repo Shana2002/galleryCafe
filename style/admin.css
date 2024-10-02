@@ -31,17 +31,20 @@ img {
 body {
     overflow: hidden;
 }
-button{
+
+button {
     background-color: var(--c-first);
     color: var(--c-fourth);
     border: 1px solid var(--c-fourth);
     padding: 5px 10px;
     border-radius: 14px;
 }
-button:hover{
+
+button:hover {
     background-color: var(--c-fourth);
     color: var(--c-first);
 }
+
 /* Reusable Contents */
 .active {
     display: block;
@@ -140,6 +143,7 @@ button:hover{
     gap: 10px;
     margin-right: 3vw;
     margin-top: 5vh;
+    z-index: 20;
 }
 
 .profile-container img {
@@ -404,15 +408,17 @@ textarea:focus {
 .card-bottom span a i {
     font-size: 1.3vmax;
 }
-.text-des{
-    
+
+.text-des {
+
     width: 37vw;
     height: 8vh;
     overflow: hidden;
-   display: -webkit-box;
-   -webkit-line-clamp: 3; /* number of lines to show */
-           line-clamp: 2; 
-   -webkit-box-orient: vertical;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    /* number of lines to show */
+    line-clamp: 2;
+    -webkit-box-orient: vertical;
 }
 
 /* order */
@@ -428,7 +434,8 @@ textarea:focus {
     align-items: center;
     gap: 10px;
 }
-.prep-card{
+
+.prep-card {
     display: flex;
     background-color: var(--c-fourth);
     justify-content: space-between;
@@ -436,36 +443,44 @@ textarea:focus {
     padding: 10px 5px;
     border-radius: 10px;
 }
+
 /* order table */
-.order-container{
+.order-container {
     width: 95%;
     height: 80vh;
     overflow-y: auto;
 }
-.oreder-table1{
+
+.oreder-table1 {
     margin-top: 5vh;
     width: 90%;
     border-collapse: collapse;
 }
+
 /* .oreder-table1 th ,.oreder-table1 td{
     border: 1px solid #000;
 } */
-.oreder-table1 tr td{
+.oreder-table1 tr td {
     text-align: center;
     border: none;
     outline: none;
     border-spacing: 0;
 }
-.oreder-table1 td , .item-info td{
+
+.oreder-table1 td,
+.item-info td {
     padding: 10px 0px;
 }
-.oreder-table1 tr:nth-child(1){
+
+.oreder-table1 tr:nth-child(1) {
     font-size: 1.2rem;
     margin-bottom: 0.5vh;
 }
-.main-row{
+
+.main-row {
     background-color: var(--c-fourth);
 }
+
 .expand-btn {
     cursor: pointer;
     background-color: #007bff;
@@ -474,20 +489,26 @@ textarea:focus {
     padding: 5px 10px;
     border-radius: 3px;
 }
+
 .item-info {
     display: none;
     max-height: 0;
     overflow: hidden;
-    transition: all 2s ease-out; /* Smooth transition for expanding */
+    transition: all 2s ease-out;
+    /* Smooth transition for expanding */
 }
+
 .expanded {
-    max-height: 500px; /* Large enough to fit the content */
+    max-height: 500px;
+    /* Large enough to fit the content */
 }
-.item-info table{
+
+.item-info table {
     border-collapse: collapse;
     background-color: var(--c-third);
 }
-.btnaddprep{
+
+.btnaddprep {
     padding: 2px 5px;
     font-size: 0.8rem;
     background-color: rgb(157, 255, 157);
@@ -495,57 +516,69 @@ textarea:focus {
     border-radius: 8px;
     text-align: center;
 }
+
 /* prom table */
-.oreder-table{
+.oreder-table {
     margin-top: 5vh;
     width: 90%;
 }
-.oreder-table tr td{
+
+.oreder-table tr td {
     text-align: center;
 }
-.oreder-table tr:nth-child(1){
+
+.oreder-table tr:nth-child(1) {
     font-size: 1.2rem;
     margin-bottom: 0.5vh
 }
-.oreder-table tr:nth-child(even){
+
+.oreder-table tr:nth-child(even) {
     background-color: var(--c-fourth);
 }
+
 /* promotion */
-.card-bottom div{
+.card-bottom div {
     display: flex;
     justify-content: space-between;
     gap: 50px;
 }
+
 /* setting */
-.setting{
+.setting {
     align-items: center;
     justify-content: center;
     height: 80%;
     width: 100%;
 }
-.setting-container-2{
+
+.setting-container-2 {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 30px;
     height: 99%;
 }
-.setting-container-2 img{
+
+.setting-container-2 img {
     width: 15vw;
     height: 30vh;
     border-radius: 50%;
 }
-.setting-container-2 div h1{
+
+.setting-container-2 div h1 {
     font-size: 1.3rem;
 }
-.setting-container-2 div h3{
+
+.setting-container-2 div h3 {
     color: #6d6d6d;
 }
+
 /* php */
-.error{
+.error {
     color: red;
 }
-.done{
+
+.done {
     color: green;
 }
 
@@ -555,4 +588,91 @@ textarea:focus {
 
 .active-1 {
     display: flex;
+}
+
+.login-bg {
+    top: 0;
+    left: 0;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    /* From https://css.glass */
+    background: rgba(98, 102, 97, 0.3);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(16.7px);
+    -webkit-backdrop-filter: blur(16.7px);
+    z-index: 21;
+}
+
+.login-wrapper {
+    top: 0;
+    left: 0;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 22;
+}
+
+.login-container {
+    width: 50vw;
+    height: 70vh;
+    background-color: white;
+    border-radius: 14px;
+    display: flex;
+}
+.detail-wrapper{
+    background-color: #12131C;
+    color: white;
+    display: flex;
+    width: 25vw;
+    border-radius: 14px 0px 0px 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+}
+.detail-wrapper p{
+    position: absolute;
+    bottom: 10px;
+    font-size: 0.8rem;
+}
+.detail-wrapper h1{
+    font-size: 3rem;
+}
+
+.login-form{
+    width: 25vw;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 3vh;
+}
+.login-form input[type=text],.login-form input[type=password]{
+    font: 1.3rem;
+    padding: 5px 10px;
+    border-radius: 8px;
+    border: 1px solid var(--c-first);
+}
+.login-form input[type=text]:focus,.login-form input[type=password]:focus{
+    outline-color: var(--c-fourth);
+}
+.login-form input{
+    width: 15vw;
+}
+.login-form input[type=submit]{
+    background-color: var(--c-second);
+    color: var(--c-first);
+    border: none;
+    padding: 5px 10px;
+    font-size: 1.3rem;
+    border-radius: 8px;
+}
+.login-form input[type=submit]:hover{
+    background-color: #12131cb2;
 }

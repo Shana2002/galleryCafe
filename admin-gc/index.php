@@ -11,6 +11,7 @@ $menuClass = new Menu();
 $promotion = new Promotion();
 $event = new Events();
 $order = new Order();
+$users = new Staff();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -33,6 +34,12 @@ $order = new Order();
 </head>
 
 <body>
+
+    <?php
+    if (!isset($_SESSION['login-user'])) {
+        include_once('components\login.php');
+    }
+    ?>
     <div class="container">
         <!-- navigations -->
         <?php include_once('components\nav-components.php') ?>
@@ -53,24 +60,7 @@ $order = new Order();
                 <!-- Events -->
                 <?php include_once('components\content-1\event-1.php') ?>
                 <!-- Users -->
-                <div class="sub-content-1 category-1">
-                    <h1>Users</h1>
-                    <h2>Add Users</h2>
-                    <form action="" method="post" enctype="multipart/form-data">
-                        <div>
-                            <label for="username">User Name</label>
-                            <input type="text" name="username" id="username">
-                        </div>
-                        <div>
-                            <label for="usertype">Type</label>
-                            <select name="usertype" id="usertype">
-                                <option value="staff">Staff</option>
-                                <option value="admin">Admin</option>
-                            </select>
-                        </div>
-                        <input type="submit" value="Add User">
-                    </form>
-                </div>
+                <?php include_once('components\content-1\user-1.php') ?>
                 <!-- Setting -->
                 <div class="sub-content-1 category-1 setting">
                     <h1>Setting</h1>
@@ -79,11 +69,22 @@ $order = new Order();
             <!-- Content 2 -->
             <div class="content-2">
                 <div class="profile-container">
-                    <img src="../Assest/biriyani.jpeg" alt="">
-                    <h5>Hansaka</h5>
+                    <?php
+                    if (isset($_SESSION['login-user'])) {
+                    ?>
+                        <img src="images\<?php if ($users->staffdetails($_SESSION['login-user'])['image'] == null) {
+                                                    echo 'Profile-PNG-File.png';
+                                                } else {
+                                                    echo $users->staffdetails($_SESSION['login-user'])['image'];
+                                                } ?>" alt="">
+                        <h5><?php echo ($_SESSION['login-user']) ?></h5>
+                    <?php
+                    }
+                    ?>
+
                 </div>
                 <!-- Dashboard -->
-                 <?php include_once('components\content-2\dashboard-2.php') ?>
+                <?php include_once('components\content-2\dashboard-2.php') ?>
                 <!-- categoty -->
                 <?php include_once('components\content-2\category-2.php') ?>
                 <!-- Menu -->
@@ -97,36 +98,27 @@ $order = new Order();
                 <!-- events -->
                 <?php include_once('components\content-2\event-2.php') ?>
                 <!-- Users -->
-                <div class="sub-container-2 category-2 ">
-                    <div class="order-container">
-                        <table class="oreder-table">
-                            <tr>
-                                <th>User Name</th>
-                                <th>User Type</th>
-                                <th>Action</th>
-
-                            </tr>
-                            <tr>
-                                <td>001</td>
-                                <td>Hansaka Ravishan</td>
-                                <td>
-                                    <a href="">Delete</a>
-                                    <a href="">Reset Password</a>
-                                </td>
-                            </tr>
-
-                        </table>
-                    </div>
-                </div>
+                <?php include_once('components\content-2\user-2.php') ?>
                 <!-- Setting -->
                 <div class="sub-container-2 category-2 ">
                     <div class="setting-container-2">
-                        <img src="../Assest/biriyani.jpeg" alt="">
-                        <div>
-                            <h1>Hansaka Ravishan</h1>
-                            <h3>Admin</h3>
-                            <button>Change Password</button>
-                        </div>
+                        <?php
+                        if (isset($_SESSION['login-user'])) {
+                        ?>
+                            <img src="images\<?php if ($users->staffdetails($_SESSION['login-user'])['image'] == null) {
+                                                    echo 'Profile-PNG-File.png';
+                                                } else {
+                                                    echo $users->staffdetails($_SESSION['login-user'])['image'];
+                                                } ?>" alt="">
+                            <div>
+                                <h1><?php echo $_SESSION['login-user'] ?></h1>
+                                <h3><?php echo $_SESSION['type'] ?></h3>
+                                <button>Change Password</button>
+                            </div>
+                        <?php
+                        }
+                        ?>
+
                     </div>
                 </div>
 
@@ -134,15 +126,18 @@ $order = new Order();
         </div>
     </div>
 
-    <?php 
-            $phpArray = array(55, 49, 20, 24, 45, 30, 30) ;
-            $js_array = json_encode($phpArray);
-        ?>
-        <script>var yValues = <?php echo $js_array ?></script>
-    <script src="../script/admin.js?v=<?php echo time() ?>">
-        
+
+    <?php
+    $phpArray = array(55, 49, 20, 24, 45, 30, 30);
+    $js_array = json_encode($phpArray);
+    ?>
+    <script>
+        var yValues = <?php echo $js_array ?>
     </script>
-    
+    <script src="../script/admin.js?v=<?php echo time() ?>">
+
+    </script>
+
 
 
 
@@ -151,26 +146,28 @@ $order = new Order();
 </html>
 <?php
 
-    if (isset($_SESSION['cat-menu'])) {
-        echo "<script>tabChange(1)</script>";
-        unset($_SESSION['cat-menu']);
-    }
-    if(isset($_SESSION['menu-view'])){
-        echo "<script>tabChange(2)</script>";
-        unset($_SESSION["menu-view"]);
-    }
-    if(isset($_SESSION['prom-view'])){
-        echo "<script>tabChange(5)</script>";
-        unset($_SESSION['prom-view']);
-    }
-    if(isset($_SESSION['evt-view'])){
-        echo "<script>tabChange(6)</script>";
-        unset($_SESSION['evt-view']);
-    }
-    if(isset($_SESSION['openor'])){
-        $row = $_SESSION['openor'];
-        echo "<script>tabChange(3)</script>";
-        ?><script>toggleItems(<?php echo $row ?>)</script><?php
-        unset($_SESSION['openor']);
-    }
-    ?>
+if (isset($_SESSION['cat-menu'])) {
+    echo "<script>tabChange(1)</script>";
+    unset($_SESSION['cat-menu']);
+}
+if (isset($_SESSION['menu-view'])) {
+    echo "<script>tabChange(2)</script>";
+    unset($_SESSION["menu-view"]);
+}
+if (isset($_SESSION['prom-view'])) {
+    echo "<script>tabChange(5)</script>";
+    unset($_SESSION['prom-view']);
+}
+if (isset($_SESSION['evt-view'])) {
+    echo "<script>tabChange(6)</script>";
+    unset($_SESSION['evt-view']);
+}
+if (isset($_SESSION['openor'])) {
+    $row = $_SESSION['openor'];
+    echo "<script>tabChange(3)</script>";
+?><script>
+        toggleItems(<?php echo $row ?>)
+    </script><?php
+                unset($_SESSION['openor']);
+            }
+                ?>

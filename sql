@@ -34,11 +34,12 @@ CREATE TABLE Gc_Events(
 );
 CREATE TABLE AdminUsers(
 	userName varchar(100) NOT NULL UNIQUE,
+    userEmail varchar(100) NOT NULL UNIQUE,
     userType varchar(10) NOT NULL,
     userImg varchar(100) NOT NULL,
     userPassword varchar(100) NOT NULL,
     userStates varchar(50) NOT NULL,
-    PRIMARY KEY (userName)
+    PRIMARY KEY (userName,userEmail)
 );
 CREATE TABLE Customers(
     cusId int NOT NULL AUTO_INCREMENT,

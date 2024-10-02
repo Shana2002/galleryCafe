@@ -16,7 +16,7 @@
                 VALUES ('$name','$email','$tel','$date','$time','$msg')";
         $result = mysqli_query($conn,$sql);
         if($result) {
-            header("locationL".SITEURL.'reservation.php');
+            header("location:".SITEURL.'reservation.php');
         }
         else {
             header('location:'.SITEURL);

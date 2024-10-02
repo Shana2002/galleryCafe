@@ -52,7 +52,6 @@ class Customers extends Users
         } else {
             return false;
         }
-
     }
     public function customerDetails($id)
     {
@@ -79,7 +78,8 @@ class Customers extends Users
             return $cusDeatils;
         }
     }
-    public function cusname($id){
+    public function cusname($id)
+    {
         $sql = "SELECT * FROM customers WHERE cusid = '$id'";
         $result = mysqli_query($this->db, $sql);
         if (mysqli_num_rows($result) == 1) {
@@ -111,37 +111,28 @@ class Staff extends Users
         $this->db = $this->connector->getConnection();
     }
     public function login($username, $password)
-    {
-        $sql = "SELECT * FROM users WHERE username = '$username' and  password = '$password'";
+    {   
+            // `adminusers`(`userName`, `userType`, `userImg`, `userPassword`, `userStates`)
+        $sql = "SELECT * FROM adminusers WHERE username = '$username' and  userPassword = '$password'";
         $result = mysqli_query($this->db, $sql);
         if (mysqli_num_rows($result) == 1) {
-            $row = mysqli_fetch_array($result);
-            $id = $row["if"];
-            return $id;
+            return true;
         } else {
-            return "false";
+            return false;
         }
     }
-    public function logout()
-    {
-
-    }
+    public function logout() {}
     public function addUser($name, $email, $mobile, $address, $username, $password, $type)
     {
-        try {
-            // INSERT INTO `users`(`id`, `name`, `email`, `username`, `password`) VALUES ('[value-1]','[value-2]','[value-3]','[value-4]','[value-5]')
-            $sql = "INSERT INTO `users`( `name`, `email`, `username`, `password`, `type`) VALUES ('$name','$email','$username','$password','$type')";
-            $res = mysqli_query($this->db, $sql);
-            if (!$res) {
-                // Throw an exception with the SQL error message
-                throw new Exception("Failed to execute query: " . mysqli_error($this->db));
-            }
-            return "true";
-        } catch (Exception $e) {
-            // Return the exception message
-            return $e->getMessage();
+        $defpsw = "123";
+        $sql = "INSERT INTO `adminusers`(`userName`, `userEmail`, `userType`,`userPassword`) 
+                            VALUES ('$name','$email','$type','$defpsw')";
+        $res = mysqli_query($this->db, $sql);
+        if ($res) {
+            return true;
+        } else {
+            return false;
         }
-
     }
     public function changePassword($id, $password)
     {
@@ -153,28 +144,42 @@ class Staff extends Users
             return false;
         }
     }
-    public function staffdetails($id)
+    public function staffdetails($username)
     {
-        $sql = "SELECT * FROM users WHERE id = '$id'";
+        $sql = "SELECT * FROM adminusers WHERE userName = '$username'";
         $result = mysqli_query($this->db, $sql);
         if (mysqli_num_rows($result) == 1) {
             $row = mysqli_fetch_array($result);
-            // `users`(`id`, `name`, `email`, `username`, `password`)
-            $userId = $row["id"];
-            $name = $row["name"];
-            $email = $row["email"];
-            $username = $row["username"];
-            $usertype = $row["type"];
+             // `adminusers`(`userName`, `userType`, `userImg`, `userPassword`, `userStates`)
+            $image = $row["userImg"];
+            $email = $row["userEmail"];
+            $username = $row["userName"];
+            $usertype = $row["userType"];
 
             $cusDeatils = array(
-                "id" => $userId,
-                "name" => $name,
-                "email" => $email,
                 "username" => $username,
                 "type" => $usertype,
+                "email"=> $email,
+                "image"=> $image,
             );
             return $cusDeatils;
         }
     }
-}
+    public function listStaff()
+    {
+        $sql = "SELECT * FROM adminusers ";
+        $result = mysqli_query($this->db, $sql);
+        if (mysqli_num_rows($result) > 0) {
+            $count = 0;
+            // `adminusers`(`userName`, `userType`, `userImg`, `userPassword`, `userStates`)
+            while ($row = mysqli_fetch_assoc($result)) {
+                $name = $row["userName"];
+                $type = $row["userType"];
 
+                $menuDetails[$count] = ["name" => $name, "type" => $type];
+                $count++;
+            }
+            return $menuDetails;
+        }
+    }
+}

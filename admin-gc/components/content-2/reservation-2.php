@@ -16,15 +16,17 @@
                     $name = $reservation['name'];
                     $date = $reservation['date'];
                     $time = $reservation['time'];
-                }
+
             ?>
-                <tr>
-                    <td><?php echo $id ?></td>
-                    <td><?php echo $name ?></td>
-                    <td><?php echo $date ?></td>
-                    <td><?php echo $time ?></td>
-                </tr>
+                    <tr>
+                        <td><?php echo $id ?></td>
+                        <td><?php echo $name ?></td>
+                        <td><?php echo $date ?></td>
+                        <td><?php echo $time ?></td>
+                    </tr>
             <?php
+
+                }
             }
             ?>
 
