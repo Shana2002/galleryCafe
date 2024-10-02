@@ -1,4 +1,4 @@
-<div class="sub-container-2 category-2 ">
+<div class="sub-container-2 category-2 <?php if(isset($_SESSION['type']) && $_SESSION['type'] == 'staff'){echo 'active-2'; } ?>">
     <div class="order-container">
         <table class="oreder-table1">
             <tr>

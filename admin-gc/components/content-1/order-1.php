@@ -1,4 +1,4 @@
-<div class="sub-content-1 category-1">
+<div class="sub-content-1 category-1 <?php if(isset($_SESSION['type']) && $_SESSION['type'] == 'staff'){echo 'active-1'; } ?>">
     <h1>Order</h1>
     <h2>Now Prepairing</h2>
     <div class="orderprp-container">
