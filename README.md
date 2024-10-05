@@ -55,9 +55,16 @@ Welcome to the repository for **The Gallery Café** website and food ordering sy
    ```bash
    cd the-gallery-cafe
 
-3. **Database setup:**
-  - Create a MySQL database named gallery_cafe.
-  - Import the provided SQL file (/db/gallery_cafe.sql) into your database:
-```bash
-   mysql -u yourusername -p gallery_cafe < /path-to-the-sql-file/gallery_cafe.sql
+1. **Database setup:**
+   - Create a MySQL database named gallery_cafe.
+   - Import the provided SQL file (/db/gallery_cafe.sql) into your database
+   ```bash
+   git clone https://github.com/yourusername/the-gallery-cafe.git
+
+ 1. **Run the project locally**
+    - If you're using XAMPP, place the project folder in the htdocs directory and run Apache and MySQL.
+    - Access the website via http://localhost/the-gallery-cafe.
+   ```bash
+   git clone https://github.com/yourusername/the-gallery-cafe.git
+ 
 
