@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Hover with Text</title>
+    <style>
+        .image-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 300px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .image-wrapper {
+            position: relative;
+            width: 10%;
+            height: 100%;
+            transition: all 0.3s ease-in-out;
+            cursor: pointer;
+            overflow: hidden;
+        }
+
+        .image-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .image-wrapper p {
+            position: absolute;
+            bottom: -30px;
+            left: 0;
+            width: 100%;
+            text-align: center;
+            color: #fff;
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 5px 0;
+            margin: 0;
+            font-size: 14px;
+            opacity: 0;
+            transition: opacity 0.3s ease, bottom 0.3s ease;
+        }
+
+        .image-wrapper:hover img {
+            width: 300%;
+        }
+
+        .image-wrapper:hover p {
+            bottom: 0;
+            opacity: 1;
+        }
+
+        .image-container .image-wrapper:not(:hover) {
+            width: 7%;
+        }
+    </style>
+</head>
+<body>
+
+<div class="image-container">
+    <div class="image-wrapper">
+        <img src="Assest/burger.jpg" alt="Image 1">
+        <p>Image 1 Description</p>
+    </div>
+    <div class="image-wrapper">
+        <img src="Assest/burger.jpg" alt="Image 2">
+        <p>Image 2 Description</p>
+    </div>
+    <div class="image-wrapper">
+        <img src="Assest/burger.jpg" alt="Image 3">
+        <p>Image 3 Description</p>
+    </div>
+    <div class="image-wrapper">
+        <img src="Assest/burger.jpg" alt="Image 4">
+        <p>Image 4 Description</p>
+    </div>
+    <div class="image-wrapper">
+        <img src="Assest/burger.jpg" alt="Image 5">
+        <p>Image 5 Description</p>
+    </div>
+    <div class="image-wrapper">
+        <img src="Assest/burger.jpg" alt="Image 6">
+        <p>Image 6 Description</p>
+    </div>
+    <div class="image-wrapper">
+        <img src="Assest/burger.jpg" alt="Image 7">
+        <p>Image 7 Description</p>
+    </div>
+    <div class="image-wrapper">
+        <img src="Assest/burger.jpg" alt="Image 8">
+        <p>Image 8 Description</p>
+    </div>
+    <div class="image-wrapper">
+        <img src="Assest/burger.jpg" alt="Image 9">
+        <p>Image 9 Description</p>
+    </div>
+    <div class="image-wrapper">
+        <img src="Assest/burger.jpg" alt="Image 10">
+        <p>Image 10 Description</p>
+    </div>
+</div>
+
+</body>
+</html>

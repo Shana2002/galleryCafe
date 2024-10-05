@@ -16,7 +16,7 @@
                     <img src="../images/menu/<?php echo $image ?>" alt="">
                     <div>
                         <h3><?php echo $name ?></h3>
-                        <p><?php echo $description ?></p>
+                        <p class="text-des"><?php echo $description ?></p>
                         <div class="card-bottom">
                             <h3>LKR <?php echo $price ?></h3>
                             <span>

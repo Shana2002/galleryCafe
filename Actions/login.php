@@ -1,6 +1,7 @@
 <?php 
+include('../config/constant.php');
 include("../class/Users.php");
-    if(isset($_POST["submit"])){
+    if(isset($_POST["login-cus"])){
         $user= $_POST['username'];
         $password= $_POST['password'];
 
@@ -8,11 +9,13 @@ include("../class/Users.php");
         // $cusId = $userLogin->login($user,$password);
         // 
         $cusId = $userLogin->login($user,$password);
-        if(!$cusId){
-            echo 'error';
+        if($cusId==false){
+            $_SESSION['cus-psw-wrong']=0;
+            header("location:".SITEURL);
         }
         else{
-            print_r($userLogin->customerDetails($cusId));
+            $_SESSION['cusid']=$cusId;
+            header("location:".SITEURL);
         }
     }
 ?>

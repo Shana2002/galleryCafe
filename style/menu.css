@@ -1,0 +1,149 @@
+/* Configure Css */
+:root {
+    --c-first: #000000;
+    --c-second: #FFCA3C;
+    --c-third: #FFFFFF;
+    --c-fourth: #202938;
+    --c-fifth: #E5E5E5;
+    --font-base: "poppins", sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-base);
+    line-height: 1.6;
+    font-size: 16px;
+    scroll-behavior: smooth;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    width: 20vw;
+}
+
+body {
+    overflow-x: hidden;
+    color: var(--c-third);
+}
+button{
+    padding: 0;
+    border: none;
+    background: none;
+}
+/* reusable */
+.btn{
+    background-color: var(--c-second);
+    padding: 5px 10px;
+    color: var(--c-fourth);
+    border-radius: 8px;
+
+}
+section{
+    background-color: var(--c-fourth);
+    height: 100vh;
+    width: 100vw;
+}
+
+/* top container */
+.top-container {
+    display: flex;
+    background-color: var(--c-first);
+    height: 15vh;
+}
+
+.top-wrapper {
+    margin: 0 10vw;
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    margin-bottom: 2vh;
+}
+
+.contact-wrapper {
+    background-color: var(--c-third);
+    color: var(--c-first);
+    /* padding: 10px 20px; */
+    border-radius: 30px;
+    width: 12vw;
+    height: 5vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.contact-wrapper p {
+    font-size: 0.7rem;
+}
+
+.contact-wrapper h3 {
+    font-size: 0.8rem;
+}
+
+.logo h1 {
+    font-size: 1.5rem;
+}
+
+.logo h1 i,
+.logo h1 span {
+    font-size: 1.7rem;
+    margin-left: 10px;
+}
+
+.action-container {
+    background-color: var(--c-third);
+    width: 12vw;
+    height: 5vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 30px;
+    gap: 1.5vh;
+}
+
+.action-container i {
+    color: var(--c-first);
+    font-size: 1.6rem;
+    cursor: pointer;
+}
+
+/* navigation bar */
+nav {
+    position: absolute;
+    margin: 0 10vw;
+    margin-top: -1vh;
+    width: 80vw;
+    height: 5vh;
+    background-color: var(--c-second);
+    border-radius: 8px;
+}
+
+nav ul {
+    margin: 0 10vw;
+    width: 60vw;
+    height: 5vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul li a {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: var(--c-first);
+}
+
+nav ul li a h3,
+nav ul li a i {
+    font-size: 1.4rem;
+}

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form Toggle with Animation</title>
+    <style>
+        /* Internal CSS */
+        
+        /* Initially hide the form */
+        #login-form {
+            display: none; /* Hidden by default */
+            position: absolute;
+            top: -100%; /* Start off the top of the screen */
+            left: 50%;
+            transform: translateX(-50%);
+            width: 300px;
+            background-color: white;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            opacity: 0;
+            transition: all 0.5s ease; /* Smooth transition */
+        }
+
+        /* Show form with top-to-bottom animation */
+        #login-form.show {
+            display: block;
+            top: 20%; /* Move down to 20% from the top */
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Button to open or close the login form -->
+    <button id="toggleBtn" onclick="toggleLoginform()">Open Login Form</button>
+
+    <!-- Login form -->
+    <div id="login-form" class="form">
+        <h2>Login Form</h2>
+        <input type="text" placeholder="Username" /><br>
+        <input type="password" placeholder="Password" /><br>
+        <button>Login</button>
+    </div>
+
+    <script>
+        // Internal JavaScript
+
+        function toggleLoginform() {
+            const loginForm = document.getElementById('login-form');
+            const toggleBtn = document.getElementById('toggleBtn');
+            
+            // Toggle the display of the login form
+            if (loginForm.classList.contains('show')) {
+                // Hide the form (move it back up and fade out)
+                loginForm.classList.remove('show');
+                toggleBtn.innerHTML = 'Open Login Form'; // Change button text to 'Open'
+                
+                // Optional: Delay hiding the form completely until after animation
+                setTimeout(() => {
+                    loginForm.style.display = 'none'; // Hide after animation completes
+                }, 500); // Delay matches the transition time
+            } else {
+                // Show the form (move it down and fade in)
+                loginForm.style.display = 'block'; // Make it visible first
+                setTimeout(() => {
+                    loginForm.classList.add('show'); // Trigger the animation
+                }, 10); // Small timeout to allow CSS to apply the transition
+                toggleBtn.innerHTML = 'Close Login Form'; // Change button text to 'Close'
+            }
+        }
+    </script>
+</body>
+</html>

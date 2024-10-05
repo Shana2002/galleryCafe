@@ -29,17 +29,23 @@
             $res = mysqli_query($this->db, $sql);
             $count = 0;
             // INSERT INTO `promotions`(`promId`, `prmoName`, `promDescription`, `startDate`, `endDate`, `promImage`)
-            while($row = mysqli_fetch_array($res)){
-                $id = $row["promId"];
-                $title = $row["prmoName"];
-                $description = $row["promDescription"];
-                $image = $row["promImage"];
-                $sDate = $row["startDate"];
-                $eDate = $row["endDate"];
-                $promotions[$count]=["id"=>$id,"title"=>$title,"description"=>$description,"image"=>$image,"start"=>$sDate,"end"=>$eDate];
-                $count++;
+            if(mysqli_num_rows($res)>0){
+                while($row = mysqli_fetch_array($res)){
+                    $id = $row["promId"];
+                    $title = $row["prmoName"];
+                    $description = $row["promDescription"];
+                    $image = $row["promImage"];
+                    $sDate = $row["startDate"];
+                    $eDate = $row["endDate"];
+                    $promotions[$count]=["id"=>$id,"title"=>$title,"description"=>$description,"image"=>$image,"start"=>$sDate,"end"=>$eDate];
+                    $count++;
+                }
+                return $promotions;
             }
-            return $promotions;
+            else{
+                return null;
+            }
+            
         }
         public function deletepromotion($id){
             $sql = "DELETE FROM promotions WHERE promId = '$id' ";
