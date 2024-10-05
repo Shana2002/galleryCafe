@@ -67,39 +67,6 @@
                 }
             }
             ?>
-
-            <!-- <div class="menu-card">
-                <img src="Assest/pizza2.jpg" alt="">
-                <div>
-                    <h1>pizza</h1>
-                    <h2>LKR 1250</h2>
-                    <a href="">Add to cart</a>
-                </div>
-            </div>
-            <div class="menu-card">
-                <img src="Assest/pizza2.jpg" alt="">
-                <div>
-                    <h1>pizza</h1>
-                    <h2>LKR 1250</h2>
-                    <a href="">Add to cart</a>
-                </div>
-            </div>
-            <div class="menu-card">
-                <img src="Assest/pizza2.jpg" alt="">
-                <div>
-                    <h1>pizza</h1>
-                    <h2>LKR 1250</h2>
-                    <a href="">Add to cart</a>
-                </div>
-            </div>
-            <div class="menu-card">
-                <img src="Assest/pizza2.jpg" alt="">
-                <div>
-                    <h1>pizza</h1>
-                    <h2>LKR 1250</h2>
-                    <a href="">Add to cart</a>
-                </div>
-            </div> -->
         </div>
     </div>
 

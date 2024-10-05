@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 26, 2024 at 09:23 PM
+-- Generation Time: Oct 05, 2024 at 12:16 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -29,11 +29,74 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `adminusers` (
   `userName` varchar(100) NOT NULL,
+  `userEmail` varchar(100) NOT NULL,
   `userType` varchar(10) NOT NULL,
   `userImg` varchar(100) NOT NULL,
   `userPassword` varchar(100) NOT NULL,
   `userStates` varchar(50) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `adminusers`
+--
+
+INSERT INTO `adminusers` (`userName`, `userEmail`, `userType`, `userImg`, `userPassword`, `userStates`) VALUES
+('admin', 'admin@gc.lk', 'admin', 'Profile-PNG-File.png', 'admin', '');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `billorder`
+--
+
+CREATE TABLE `billorder` (
+  `orderId` int(11) NOT NULL,
+  `billId` int(11) NOT NULL,
+  `menuId` int(11) NOT NULL,
+  `qty` int(11) NOT NULL,
+  `orderStatus` varchar(20) DEFAULT 'get order'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `billorder`
+--
+
+INSERT INTO `billorder` (`orderId`, `billId`, `menuId`, `qty`, `orderStatus`) VALUES
+(1, 1, 1, 1, 'prepaired'),
+(2, 1, 2, 1, 'prepaired'),
+(3, 1, 4, 3, 'prepaired'),
+(4, 2, 4, 1, 'start prepairing'),
+(5, 2, 1, 1, 'start prepairing'),
+(6, 2, 7, 2, 'start prepairing'),
+(7, 3, 2, 1, 'prepaired'),
+(8, 3, 4, 1, 'prepaired'),
+(9, 3, 6, 1, 'prepaired'),
+(10, 3, 5, 1, 'prepaired'),
+(11, 3, 7, 2, 'prepaired');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `bills`
+--
+
+CREATE TABLE `bills` (
+  `billId` int(11) NOT NULL,
+  `cusId` int(11) NOT NULL,
+  `subTotal` int(11) NOT NULL,
+  `billdate` date NOT NULL,
+  `billtime` time NOT NULL,
+  `billStatus` varchar(20) DEFAULT 'get order'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `bills`
+--
+
+INSERT INTO `bills` (`billId`, `cusId`, `subTotal`, `billdate`, `billtime`, `billStatus`) VALUES
+(1, 1, 9000, '2024-09-27', '17:12:02', 'dilivered'),
+(2, 2, 6750, '2024-09-27', '19:26:58', 'start cooking'),
+(3, 3, 10000, '2024-09-27', '21:03:26', 'dilivered');
 
 -- --------------------------------------------------------
 
@@ -61,6 +124,22 @@ INSERT INTO `categories` (`catId`, `catName`, `catImg`) VALUES
 (7, 'Chinese', 'chinese.jpg'),
 (8, 'Desserts', 'desserts.jpg'),
 (9, 'Beverages', 'beverages.jpg');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `cusreservation`
+--
+
+CREATE TABLE `cusreservation` (
+  `reservationId` int(11) NOT NULL,
+  `name` varchar(100) NOT NULL,
+  `email` varchar(100) NOT NULL,
+  `mobile` varchar(13) NOT NULL,
+  `resdate` date NOT NULL,
+  `restime` time NOT NULL,
+  `msg` varchar(1000) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
 
@@ -105,6 +184,15 @@ CREATE TABLE `cus_favourite` (
   `customer` int(11) NOT NULL,
   `menuID` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `cus_favourite`
+--
+
+INSERT INTO `cus_favourite` (`customer`, `menuID`) VALUES
+(1, 2),
+(2, 1),
+(2, 4);
 
 -- --------------------------------------------------------
 
@@ -186,8 +274,24 @@ INSERT INTO `promotions` (`promId`, `prmoName`, `promDescription`, `startDate`, 
 -- Indexes for table `adminusers`
 --
 ALTER TABLE `adminusers`
-  ADD PRIMARY KEY (`userName`),
-  ADD UNIQUE KEY `userName` (`userName`);
+  ADD PRIMARY KEY (`userName`,`userEmail`),
+  ADD UNIQUE KEY `userName` (`userName`),
+  ADD UNIQUE KEY `userEmail` (`userEmail`);
+
+--
+-- Indexes for table `billorder`
+--
+ALTER TABLE `billorder`
+  ADD PRIMARY KEY (`orderId`),
+  ADD KEY `billId` (`billId`),
+  ADD KEY `menuId` (`menuId`);
+
+--
+-- Indexes for table `bills`
+--
+ALTER TABLE `bills`
+  ADD PRIMARY KEY (`billId`),
+  ADD KEY `cusId` (`cusId`);
 
 --
 -- Indexes for table `categories`
@@ -195,6 +299,12 @@ ALTER TABLE `adminusers`
 ALTER TABLE `categories`
   ADD PRIMARY KEY (`catId`),
   ADD UNIQUE KEY `catName` (`catName`);
+
+--
+-- Indexes for table `cusreservation`
+--
+ALTER TABLE `cusreservation`
+  ADD PRIMARY KEY (`reservationId`);
 
 --
 -- Indexes for table `customers`
@@ -239,10 +349,28 @@ ALTER TABLE `promotions`
 --
 
 --
+-- AUTO_INCREMENT for table `billorder`
+--
+ALTER TABLE `billorder`
+  MODIFY `orderId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+
+--
+-- AUTO_INCREMENT for table `bills`
+--
+ALTER TABLE `bills`
+  MODIFY `billId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
 -- AUTO_INCREMENT for table `categories`
 --
 ALTER TABLE `categories`
   MODIFY `catId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+
+--
+-- AUTO_INCREMENT for table `cusreservation`
+--
+ALTER TABLE `cusreservation`
+  MODIFY `reservationId` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `customers`
@@ -271,6 +399,19 @@ ALTER TABLE `promotions`
 --
 -- Constraints for dumped tables
 --
+
+--
+-- Constraints for table `billorder`
+--
+ALTER TABLE `billorder`
+  ADD CONSTRAINT `billorder_ibfk_1` FOREIGN KEY (`billId`) REFERENCES `bills` (`billId`),
+  ADD CONSTRAINT `billorder_ibfk_2` FOREIGN KEY (`menuId`) REFERENCES `menus` (`menuId`);
+
+--
+-- Constraints for table `bills`
+--
+ALTER TABLE `bills`
+  ADD CONSTRAINT `bills_ibfk_1` FOREIGN KEY (`cusId`) REFERENCES `customers` (`cusId`);
 
 --
 -- Constraints for table `cus_favourite`

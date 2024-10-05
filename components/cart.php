@@ -49,23 +49,6 @@
                 }
             }
             ?>
-
-
-
-            <!-- <div class="cart-item">
-                <img src="Assest/pizza2.jpg" alt="">
-                <div class="name-container">
-                    <h1>pizza</h1>
-                    <div>
-                        <h3>LKR 1300</h3>
-                        <h2>QTY 4</h2>
-                        <h2>Total LKR 5200</h2>
-                        <a href=""><i class="fa-solid fa-trash"></i></a>
-                    </div>
-                </div>
-            </div> -->
-
-
         </div>
         <?php  
             if(isset($_SESSION['cusid'])&& isset( $_SESSION['cartArray'])){

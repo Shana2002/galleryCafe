@@ -17,18 +17,5 @@
             }
         }
         ?>
-
-        <!-- <div class="prep-card">
-            <h4>Chicken Mix Rice</h4>
-            <a href="">Done</a>
-        </div>
-        <div class="prep-card">
-            <h4>Chicken Mix Rice</h4>
-            <a href="">Done</a>
-        </div>
-        <div class="prep-card">
-            <h4>Chicken Mix Rice</h4>
-            <a href="">Done</a>
-        </div> -->
     </div>
 </div>

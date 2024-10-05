@@ -50,65 +50,6 @@
             }
 
             ?>
-
-            <!-- <a href="" class="item-card">
-                <img src="Assest/pizza2.jpg" alt="">
-                <h4>pizza</h4>
-                <div class="price">
-                    <h3>LKR 1450</h3><i class="fa-solid fa-heart"></i>
-                </div>
-            </a>
-            
-            <a href="" class="item-card">
-                <img src="Assest/pizza2.jpg" alt="">
-                <h4>pizza</h4>
-                <div class="price">
-                    <h3>LKR 1450</h3><i class="fa-solid fa-heart"></i>
-                </div>
-            </a>
-            <a href="" class="item-card">
-                <img src="Assest/pizza2.jpg" alt="">
-                <h4>pizza</h4>
-                <div class="price">
-                    <h3>LKR 1450</h3><i class="fa-solid fa-heart"></i>
-                </div>
-            </a>
-            <a href="" class="item-card">
-                <img src="Assest/pizza2.jpg" alt="">
-                <h4>pizza</h4>
-                <div class="price">
-                    <h3>LKR 1450</h3><i class="fa-solid fa-heart"></i>
-                </div>
-            </a>
-            <a href="" class="item-card">
-                <img src="Assest/pizza2.jpg" alt="">
-                <h4>pizza</h4>
-                <div class="price">
-                    <h3>LKR 1450</h3><i class="fa-solid fa-heart"></i>
-                </div>
-            </a>
-            <a href="" class="item-card">
-                <img src="Assest/pizza2.jpg" alt="">
-                <h4>pizza</h4>
-                <div class="price">
-                    <h3>LKR 1450</h3><i class="fa-solid fa-heart"></i>
-                </div>
-            </a>
-            <a href="" class="item-card">
-                <img src="Assest/pizza2.jpg" alt="">
-                <h4>pizza</h4>
-                <div class="price">
-                    <h3>LKR 1450</h3><i class="fa-solid fa-heart"></i>
-                </div>
-            </a>
-            <a href="" class="item-card">
-                <img src="Assest/pizza2.jpg" alt="">
-                <h4>pizza</h4>
-                <div class="price">
-                    <h3>LKR 1450</h3><i class="fa-solid fa-heart"></i>
-                </div>
-            </a> -->
-
         </div>
     </div>
 

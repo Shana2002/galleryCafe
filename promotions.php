@@ -32,23 +32,6 @@
         }
 
         ?>
-
-        
-        <!-- <div class="prom-card">
-            <img src="Assest/pizza.jpg" alt="">
-            <h1>Buy 1 Get 1 FREE</h1>
-            <p>Buy Large pan pizza and Get large pan pizza</p>
-            <div>
-                <h3>Till</h3>
-                <h3>27th Octomber 2024</h3>
-                <a href="menu.php">Get Offer</a>
-            </div>
-        </div> -->
-
-
-
-
-
     </div>
 </div>
 <!-- code end -->
