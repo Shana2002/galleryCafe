@@ -83,10 +83,10 @@ Welcome to the repository for **The Gallery Café** website and food ordering sy
    ![alt text](https://github.com/Shana2002/galleryCafe/blob/master/images/screenshot/menuss.png?raw=true)
 
    **Menu Page**
-      ![alt text](https://github.com/Shana2002/galleryCafe/blob/master/images/screenshot/menuss.png?raw=true) 
+      ![alt text](https://github.com/Shana2002/galleryCafe/blob/master/images/screenshot/menuss.png) 
 
    **Admin Dashboard**
-      ![alt text](https://github.com/Shana2002/galleryCafe/blob/master/images/screenshot/menuss.png?raw=true)
+      ![alt text](https://github.com/Shana2002/galleryCafe/blob/master/images/screenshot/dashboard.png?raw=true)
 
 ---
 
