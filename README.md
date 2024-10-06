@@ -79,3 +79,8 @@ Welcome to the repository for **The Gallery Café** website and food ordering sy
 ---
 
 ## 📸 ScreenShot
+   **Home Page**
+   `![home page](images/screenshot/menuss.png)`
+
+   **Menu Page**
+   `![Menu Page](images/screenshot/menuss.png)`
