@@ -64,7 +64,18 @@ Welcome to the repository for **The Gallery Café** website and food ordering sy
  1. **Run the project locally**
     - If you're using XAMPP, place the project folder in the htdocs directory and run Apache and MySQL.
     - Access the website via http://localhost/the-gallery-cafe.
-   ```bash
-   git clone https://github.com/yourusername/the-gallery-cafe.git
- 
 
+---
+
+## 🚀 Usage 
+
+- Admin Access
+    - Log in using the default admin credentials.
+    - Admin can manage the menu, orders, promotions, and users from the dashboard.
+- Customer Access
+    - New users can register to create an account.
+    - Once logged in, customers can browse the menu, place food orders, and reserve tables.
+
+---
+
+## 📸 ScreenShot
