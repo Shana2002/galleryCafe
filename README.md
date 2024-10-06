@@ -80,7 +80,7 @@ Welcome to the repository for **The Gallery Café** website and food ordering sy
 
 ## 📸 ScreenShot
    **Home Page**
-   `![home page](images/screenshot/menuss.png)`
+   `!![alt text](https://github.com/Shana2002/galleryCafe/blob/master/images/screenshot/menuss.png?raw=true)`
 
    **Menu Page**
    `![Menu Page](images/screenshot/menuss.png)`
