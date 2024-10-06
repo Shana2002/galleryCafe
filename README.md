@@ -90,21 +90,26 @@ Welcome to the repository for **The Gallery Café** website and food ordering sy
 
 ---
 
-## 🛠️Contributing
-   ### Contributions are welcome! Here's how you can help:
+## 🛠️Contributing 
+  **Contributions are welcome! Here's how you can help:**
 
-      1. Fork the repository. 
-      2. Create a new branch for your feature or bug fix:
-         ```bash 
-         git checkout -b feature-name 
-      
-      3. Make the necessary changes and commit:
-         ```bash
-         git commit -m "Add your message" 
-      
-      4. Push your branch and submit a pull request: 
-         ```bash 
-         git push origin feature-name 
+1. **Fork the repository.**
+   
+1. **Create a new branch for your feature or bug fix:**
+   ```bash
+   git checkout -b feature-name
+1. **Make the necessary changes and commit:**
+   ```bash
+   git commit -m "Add your message"
+   
+1. **Navigate into the project folder:**
+   ```bash
+   cd the-gallery-cafe
+1. **Push your branch and submit a pull request:**
+   ```bash
+   git push origin feature-name
+   
+---
 
 ## 👤 Contact
    - Feel free to reach out for any queries or feedback:
