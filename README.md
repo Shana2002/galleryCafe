@@ -83,4 +83,35 @@ Welcome to the repository for **The Gallery Café** website and food ordering sy
    ![alt text](https://github.com/Shana2002/galleryCafe/blob/master/images/screenshot/menuss.png?raw=true)
 
    **Menu Page**
-   `![Menu Page](images/screenshot/menuss.png)`
+      ![alt text](https://github.com/Shana2002/galleryCafe/blob/master/images/screenshot/menuss.png?raw=true) 
+
+   **Admin Dashboard**
+      ![alt text](https://github.com/Shana2002/galleryCafe/blob/master/images/screenshot/menuss.png?raw=true)
+
+---
+
+## 🛠️Contributing
+   ### Contributions are welcome! Here's how you can help:
+
+      1. Fork the repository. 
+      2. Create a new branch for your feature or bug fix:
+         ```bash 
+         git checkout -b feature-name 
+      
+      3. Make the necessary changes and commit:
+         ```bash
+         git commit -m "Add your message" 
+      
+      4. Push your branch and submit a pull request: 
+         ```bash 
+         git push origin feature-name 
+
+## 👤 Contact
+   - Feel free to reach out for any queries or feedback:
+
+      - Email: hansakaravi02@gmail.com
+      - GitHub: @shana2002
+
+## 🌟 Acknowledgements
+   - Special thanks to all contributors and users who helped shape this project.
+
